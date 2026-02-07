@@ -1340,59 +1340,59 @@ section {
 }
 
 .pp-page-fasilitas {
-    --pp-bg-image: url("../assets/gallery/Fasilitas.jpeg");
+    --pp-bg-image: url("assets/gallery/Fasilitas.jpeg");
 }
 
 .pp-page-kontak {
-    --pp-bg-image: url("../assets/gallery/Gedung sekolah.jpeg");
+    --pp-bg-image: url("assets/gallery/Gedung sekolah.jpeg");
 }
 
 .pp-page-smp {
-    --pp-bg-image: url("../assets/gallery/Ruang kelas.jpeg");
+    --pp-bg-image: url("assets/gallery/Ruang kelas.jpeg");
 }
 
 .pp-page-sma-fullday {
-    --pp-bg-image: url("../assets/gallery/KBM1.jpeg");
+    --pp-bg-image: url("assets/gallery/KBM1.jpeg");
 }
 
 .pp-page-sma-boarding {
-    --pp-bg-image: url("../assets/gallery/Asrama .jpeg");
+    --pp-bg-image: url("assets/gallery/Asrama .jpeg");
 }
 
 .pp-page-pengajar {
-    --pp-bg-image: url("../assets/gallery/pengajar.jpeg");
+    --pp-bg-image: url("assets/gallery/pengajar.jpeg");
 }
 
 .pp-page-tentang {
-    --pp-bg-image: url("../assets/gallery/tentang.jpeg");
+    --pp-bg-image: url("assets/gallery/Tentang.jpeg");
 }
 
 .pp-page-prestasi {
-    --pp-bg-image: url("../assets/gallery/Prestasi.jpeg");
+    --pp-bg-image: url("assets/gallery/Prestasi.jpeg");
 }
 
 .pp-page-profil {
-    --pp-bg-image: url("../assets/gallery/Profil.jpeg");
+    --pp-bg-image: url("assets/gallery/PBL.jpeg");
 }
 
 .pp-page-kegiatan {
-    --pp-bg-image: url("../assets/gallery/Olahraga.jpeg");
+    --pp-bg-image: url("assets/gallery/Olahraga.jpeg");
 }
 
 .pp-page-alumni {
-    --pp-bg-image: url("../assets/gallery/Wisuda1.jpeg");
+    --pp-bg-image: url("assets/gallery/Wisuda1.jpeg");
 }
 
 .pp-page-faq {
-    --pp-bg-image: url("../assets/gallery/Shalat jamaah.jpeg");
+    --pp-bg-image: url("assets/gallery/Shalat jamaah.jpeg");
 }
 
 .pp-page-psb {
-    --pp-bg-image: url("../assets/heroPSB.png");
+    --pp-bg-image: url("assets/heroPSB.png");
 }
 
 .pp-page-psb .pp-page-header::before {
-    background-image: url("../assets/heroPSB.png");
+    background-image: url("assets/heroPSB.png");
     background-position: center;
 }
 
@@ -1422,7 +1422,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: var(--pp-bg-image, url('../assets/images/hero-1.jpg'));
+    background-image: var(--pp-bg-image, url('assets/images/hero-1.jpg'));
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -4199,7 +4199,7 @@ section {
     }
 }
 :root {
-            --pp-bg-image: url('../assets/images/hero-4.jpg');
+            --pp-bg-image: url('assets/images/hero-4.jpg');
         }
         
         /* Form Registration Styles */
