@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Santri Baru - Pesantren Peradaban</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+    <a href="../index.html" class="logo">
+        <img src="../assets/Logo Peradaban2.png" alt="Logo Pesantren Peradaban">
+        <div class="logo-text">
+            <span class="logo-title"></span>
+            <span class="logo-subtitle"></span>
+        </div>
+    </a>
+    
+    <div class="nav-menu" id="navMenu">
+        <a href="../index.html" class="nav-link">Beranda</a>
+        <div class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Program <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+                <a href="smp-pesantren.html" class="dropdown-item">SMP Pesantren</a>
+                <a href="sma-fullday.html" class="dropdown-item">SMA Full Day</a>
+                <a href="sma-boarding.html" class="dropdown-item">SMA Boarding</a>
+            </div>
+        </div>
+        <a href="fasilitas.html" class="nav-link">Fasilitas</a>
+        <a href="tentang.html" class="nav-link">Tentang Kami</a>
+        <div class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Informasi <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+                <a href="kegiatan.html" class="dropdown-item">Kegiatan Santri</a>
+                <a href="galeri.html" class="dropdown-item">Galeri Kegiatan</a>
+                <a href="alumni.html" class="dropdown-item">Alumni & Testimoni</a>
+                <a href="faq.html" class="dropdown-item">FAQ</a>
+                <a href="prestasi.html" class="dropdown-item">Prestasi</a>
+                <a href="kontak.html" class="dropdown-item">Kontak</a>
+            </div>
+        </div>
+        <a href="pengajar.html" class="nav-link">Pengajar</a>
+        <a href="https://s.id/psbpesantrenperadaban26" class="btn-nav">Daftar Sekarang</a>
+    </div>
+    
+    <button class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pp-page-header">
+        <div class="pp-container">
+            <div class="pp-page-header-content">
+                <h1 class="pp-page-title">Pendaftaran Santri Baru</h1>
+                <p class="pp-page-subtitle">Bergabunglah dengan keluarga besar Pesantren Peradaban Tahun Ajaran 2026/2027</p>
+                <div class="pp-breadcrumb">
+                    <a href="../index.html">Beranda</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Pendaftaran</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="pp-page-content">
+        <div class="pp-container">
+            <div class="pp-registration-container">
+                <div class="pp-registration-header">
+                    <h2 class="pp-registration-title">Formulir Pendaftaran Online</h2>
+                    <p class="pp-registration-subtitle">Isi formulir di bawah ini dengan data yang benar dan lengkap. Data akan dikirim langsung ke WhatsApp kami untuk proses lebih lanjut.</p>
+                </div>
+                
+                <!-- Progress Steps -->
+                <div class="pp-form-progress">
+                    <div class="pp-progress-step active">
+                        <div class="pp-step-circle">1</div>
+                        <div class="pp-step-label">Data Calon Santri</div>
+                    </div>
+                    <div class="pp-progress-step">
+                        <div class="pp-step-circle">2</div>
+                        <div class="pp-step-label">Data Orang Tua</div>
+                    </div>
+                    <div class="pp-progress-step">
+                        <div class="pp-step-circle">3</div>
+                        <div class="pp-step-label">Program & Berkas</div>
+                    </div>
+                    <div class="pp-progress-step">
+                        <div class="pp-step-circle">4</div>
+                        <div class="pp-step-label">Konfirmasi</div>
+                    </div>
+                </div>
+                
+                <!-- Registration Form -->
+                <form id="ppRegistrationForm">
+                    <!-- Step 1: Data Calon Santri -->
+                    <div class="pp-form-section pp-form-step active" data-step="1">
+                        <h3 class="pp-section-title">Data Calon Santri</h3>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="nama_santri" class="pp-form-label required">Nama Lengkap Santri</label>
+                                <input type="text" id="nama_santri" name="nama_santri" class="pp-form-control" placeholder="Masukkan nama lengkap" required>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="nama_panggilan" class="pp-form-label">Nama Panggilan</label>
+                                <input type="text" id="nama_panggilan" name="nama_panggilan" class="pp-form-control" placeholder="Nama panggilan sehari-hari">
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="tempat_lahir" class="pp-form-label required">Tempat Lahir</label>
+                                <input type="text" id="tempat_lahir" name="tempat_lahir" class="pp-form-control" placeholder="Kota tempat lahir" required>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="tanggal_lahir" class="pp-form-label required">Tanggal Lahir</label>
+                                <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="pp-form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label class="pp-form-label required">Jenis Kelamin</label>
+                                <div class="pp-form-radio-group">
+                                    <label class="pp-radio-option">
+                                        <input type="radio" name="jenis_kelamin" value="Laki-laki" required> Laki-laki
+                                    </label>
+                                    <label class="pp-radio-option">
+                                        <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="agama" class="pp-form-label required">Agama</label>
+                                <select id="agama" name="agama" class="pp-form-control pp-form-select" required>
+                                    <option value="">Pilih Agama</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Buddha">Buddha</option>
+                                    <option value="Konghucu">Konghucu</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-group">
+                            <label for="alamat_santri" class="pp-form-label required">Alamat Lengkap</label>
+                            <textarea id="alamat_santri" name="alamat_santri" class="pp-form-control pp-form-textarea" placeholder="Jl. Nama Jalan No. XX, Kelurahan, Kecamatan, Kota, Kode Pos" required></textarea>
+                        </div>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="no_hp_santri" class="pp-form-label">Nomor HP Santri</label>
+                                <input type="tel" id="no_hp_santri" name="no_hp_santri" class="pp-form-control" placeholder="08xxxxxxxxxx">
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="email_santri" class="pp-form-label">Email Santri</label>
+                                <input type="email" id="email_santri" name="email_santri" class="pp-form-control" placeholder="santri@email.com">
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="sekolah_asal" class="pp-form-label required">Sekolah Asal</label>
+                                <input type="text" id="sekolah_asal" name="sekolah_asal" class="pp-form-control" placeholder="Nama sekolah sebelumnya" required>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="kelas_dituju" class="pp-form-label required">Kelas yang Dituju</label>
+                                <select id="kelas_dituju" name="kelas_dituju" class="pp-form-control pp-form-select" required>
+                                    <option value="">Pilih Kelas</option>
+                                    <option value="Kelas 7">Kelas 7 (SMP)</option>
+                                    <option value="Kelas 8">Kelas 8 (SMP)</option>
+                                    <option value="Kelas 9">Kelas 9 (SMP)</option>
+                                    <option value="Kelas 10">Kelas 10 (SMA)</option>
+                                    <option value="Kelas 11">Kelas 11 (SMA)</option>
+                                    <option value="Kelas 12">Kelas 12 (SMA)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-group">
+                            <label for="hobi_bakat" class="pp-form-label">Hobi & Bakat</label>
+                            <textarea id="hobi_bakat" name="hobi_bakat" class="pp-form-control pp-form-textarea" placeholder="Misal: Menghafal Al-Qur'an, Olahraga, Seni, dll." rows="3"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Data Orang Tua -->
+                    <div class="pp-form-section pp-form-step" data-step="2">
+                        <h3 class="pp-section-title">Data Orang Tua/Wali</h3>
+                        
+                        <div class="pp-form-group">
+                            <label class="pp-form-label required">Status Orang Tua</label>
+                            <div class="pp-form-radio-group">
+                                <label class="pp-radio-option">
+                                    <input type="radio" name="status_ortu" value="Orang Tua Kandung" required> Orang Tua Kandung
+                                </label>
+                                <label class="pp-radio-option">
+                                    <input type="radio" name="status_ortu" value="Wali"> Wali
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="nama_ayah" class="pp-form-label required">Nama Ayah</label>
+                                <input type="text" id="nama_ayah" name="nama_ayah" class="pp-form-control" placeholder="Nama lengkap ayah" required>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="nama_ibu" class="pp-form-label required">Nama Ibu</label>
+                                <input type="text" id="nama_ibu" name="nama_ibu" class="pp-form-control" placeholder="Nama lengkap ibu" required>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="pekerjaan_ayah" class="pp-form-label required">Pekerjaan Ayah</label>
+                                <input type="text" id="pekerjaan_ayah" name="pekerjaan_ayah" class="pp-form-control" placeholder="Jabatan/Profesi ayah" required>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="pekerjaan_ibu" class="pp-form-label required">Pekerjaan Ibu</label>
+                                <input type="text" id="pekerjaan_ibu" name="pekerjaan_ibu" class="pp-form-control" placeholder="Jabatan/Profesi ibu" required>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="pendidikan_ayah" class="pp-form-label">Pendidikan Terakhir Ayah</label>
+                                <select id="pendidikan_ayah" name="pendidikan_ayah" class="pp-form-control pp-form-select">
+                                    <option value="">Pilih Pendidikan</option>
+                                    <option value="SD">SD/Sederajat</option>
+                                    <option value="SMP">SMP/Sederajat</option>
+                                    <option value="SMA">SMA/Sederajat</option>
+                                    <option value="D1-D3">D1/D2/D3</option>
+                                    <option value="S1">S1/Strata 1</option>
+                                    <option value="S2">S2/Strata 2</option>
+                                    <option value="S3">S3/Strata 3</option>
+                                </select>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="pendidikan_ibu" class="pp-form-label">Pendidikan Terakhir Ibu</label>
+                                <select id="pendidikan_ibu" name="pendidikan_ibu" class="pp-form-control pp-form-select">
+                                    <option value="">Pilih Pendidikan</option>
+                                    <option value="SD">SD/Sederajat</option>
+                                    <option value="SMP">SMP/Sederajat</option>
+                                    <option value="SMA">SMA/Sederajat</option>
+                                    <option value="D1-D3">D1/D2/D3</option>
+                                    <option value="S1">S1/Strata 1</option>
+                                    <option value="S2">S2/Strata 2</option>
+                                    <option value="S3">S3/Strata 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-group">
+                            <label for="alamat_ortu" class="pp-form-label required">Alamat Orang Tua</label>
+                            <textarea id="alamat_ortu" name="alamat_ortu" class="pp-form-control pp-form-textarea" placeholder="Alamat lengkap orang tua (jika berbeda dengan santri)" required></textarea>
+                        </div>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="no_hp_ayah" class="pp-form-label required">No. HP Ayah</label>
+                                <input type="tel" id="no_hp_ayah" name="no_hp_ayah" class="pp-form-control" placeholder="08xxxxxxxxxx" required>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="no_hp_ibu" class="pp-form-label required">No. HP Ibu</label>
+                                <input type="tel" id="no_hp_ibu" name="no_hp_ibu" class="pp-form-control" placeholder="08xxxxxxxxxx" required>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="email_ortu" class="pp-form-label required">Email Orang Tua</label>
+                                <input type="email" id="email_ortu" name="email_ortu" class="pp-form-control" placeholder="ortu@email.com" required>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="hubungan_dengan_santri" class="pp-form-label">Hubungan dengan Santri</label>
+                                <input type="text" id="hubungan_dengan_santri" name="hubungan_dengan_santri" class="pp-form-control" placeholder="Jika wali, sebutkan hubungan">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Program & Berkas -->
+                    <div class="pp-form-section pp-form-step" data-step="3">
+                        <h3 class="pp-section-title">Program & Berkas Pendaftaran</h3>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="program_dipilih" class="pp-form-label required">Program yang Dipilih</label>
+                                <select id="program_dipilih" name="program_dipilih" class="pp-form-control pp-form-select" required>
+                                    <option value="">Pilih Program</option>
+                                    <option value="SMP Pesantren">SMP Pesantren</option>
+                                    <option value="SMA Full Day">SMA Full Day</option>
+                                    <option value="SMA Boarding">SMA Boarding</option>
+                                </select>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="tahun_ajaran" class="pp-form-label required">Tahun Ajaran</label>
+                                <select id="tahun_ajaran" name="tahun_ajaran" class="pp-form-control pp-form-select" required>
+                                    <option value="">Pilih Tahun Ajaran</option>
+                                    <option value="2024/2025">2024/2025</option>
+                                    <option value="2025/2026">2025/2026</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-group">
+                            <label class="pp-form-label required">Berkas yang Disiapkan</label>
+                            <div class="pp-checkbox-group">
+                                <label class="pp-checkbox-option">
+                                    <input type="checkbox" name="berkas_foto" value="Ya" required>
+                                    <span class="pp-checkbox-label">Foto 3x4 (3 lembar, background merah)</span>
+                                </label>
+                                <label class="pp-checkbox-option">
+                                    <input type="checkbox" name="berkas_rapor" value="Ya" required>
+                                    <span class="pp-checkbox-label">Fotokopi rapor 2 semester terakhir (legalisir)</span>
+                                </label>
+                                <label class="pp-checkbox-option">
+                                    <input type="checkbox" name="berkas_akta" value="Ya" required>
+                                    <span class="pp-checkbox-label">Fotokopi akta kelahiran</span>
+                                </label>
+                                <label class="pp-checkbox-option">
+                                    <input type="checkbox" name="berkas_kk" value="Ya" required>
+                                    <span class="pp-checkbox-label">Fotokopi Kartu Keluarga (KK)</span>
+                                </label>
+                                <label class="pp-checkbox-option">
+                                    <input type="checkbox" name="berkas_surat_sehat" value="Ya" required>
+                                    <span class="pp-checkbox-label">Surat keterangan sehat dari dokter</span>
+                                </label>
+                                <label class="pp-checkbox-option">
+                                    <input type="checkbox" name="berkas_surat_nilai" value="Ya">
+                                    <span class="pp-checkbox-label">Surat keterangan nilai UASBN/USBN (jika ada)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-grid">
+                            <div class="pp-form-group">
+                                <label for="cara_kirim_berkas" class="pp-form-label required">Cara Pengiriman Berkas</label>
+                                <select id="cara_kirim_berkas" name="cara_kirim_berkas" class="pp-form-control pp-form-select" required>
+                                    <option value="">Pilih Cara Pengiriman</option>
+                                    <option value="Dikirim via POS">Dikirim via POS/JNE</option>
+                                    <option value="Diantar langsung">Diantar langsung ke pesantren</option>
+                                    <option value="Email scan">Email scan dokumen terlebih dahulu</option>
+                                </select>
+                            </div>
+                            
+                            <div class="pp-form-group">
+                                <label for="tahu_dari" class="pp-form-label required">Tahu informasi dari mana?</label>
+                                <select id="tahu_dari" name="tahu_dari" class="pp-form-control pp-form-select" required>
+                                    <option value="">Pilih sumber informasi</option>
+                                    <option value="Website">Website Pesantren</option>
+                                    <option value="Instagram">Instagram/Media Sosial</option>
+                                    <option value="Teman/Keluarga">Teman/Keluarga/Santri</option>
+                                    <option value="Brosur">Brosur/Flyer</option>
+                                    <option value="Sekolah">Sekolah Asal</option>
+                                    <option value="Seminar">Seminar/Open House</option>
+                                    <option value="Lainnya">Lainnya</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-group">
+                            <label for="catatan_tambahan" class="pp-form-label">Catatan Tambahan</label>
+                            <textarea id="catatan_tambahan" name="catatan_tambahan" class="pp-form-control pp-form-textarea" placeholder="Kebutuhan khusus, riwayat kesehatan penting, atau informasi lainnya" rows="4"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Konfirmasi -->
+                    <div class="pp-form-section pp-form-step" data-step="4">
+                        <h3 class="pp-section-title">Konfirmasi Pendaftaran</h3>
+                        
+                        <div class="pp-form-group">
+                            <h4 style="color: var(--pp-navy); margin-bottom: 1rem;">Ringkasan Data Pendaftaran</h4>
+                            <div id="pp-summary-content" style="background-color: var(--pp-light-gray); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                                <!-- Summary akan diisi oleh JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="pp-form-group">
+                            <label class="pp-checkbox-option">
+                                <input type="checkbox" id="pp-confirm-data" name="confirm_data" required>
+                                <span class="pp-checkbox-label">Saya menyatakan bahwa data yang saya berikan adalah benar dan siap bertanggung jawab atas keabsahan data tersebut.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="pp-form-group">
+                            <label class="pp-checkbox-option">
+                                <input type="checkbox" id="pp-agree-terms" name="agree_terms" required>
+                                <span class="pp-checkbox-label">Saya telah membaca dan menyetujui <a href="#" style="color: var(--pp-gold);">syarat dan ketentuan</a> pendaftaran Pesantren Peradaban.</span>
+                            </label>
+                        </div>
+                        
+                        <!-- WhatsApp Success Message -->
+                        <div class="pp-whatsapp-success" id="pp-whatsapp-success">
+                            <div class="pp-success-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h3 class="pp-success-title">Data Berhasil Dikirim!</h3>
+                            <p class="pp-success-message">
+                                Data pendaftaran telah berhasil dikirim ke WhatsApp Pesantren Peradaban. 
+                                Silahkan lanjutkan ke WhatsApp untuk mengirim berkas pendukung dan konfirmasi lebih lanjut.
+                            </p>
+                            <div class="pp-success-actions">
+                                <a href="#" class="pp-btn-whatsapp" id="pp-whatsapp-link" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Buka WhatsApp
+                                </a>
+                                <button type="button" class="pp-btn pp-btn-prev" id="pp-back-to-form">
+                                    <i class="fas fa-edit"></i> Edit Data Lagi
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Navigation -->
+                    <div class="pp-form-navigation">
+                        <button type="button" class="pp-btn pp-btn-prev" id="pp-btn-prev">
+                            <i class="fas fa-arrow-left"></i> Sebelumnya
+                        </button>
+                        <button type="button" class="pp-btn pp-btn-next" id="pp-btn-next">
+                            Selanjutnya <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button type="submit" class="pp-btn pp-btn-submit" id="pp-btn-submit" style="display: none;">
+                            <i class="fab fa-whatsapp"></i> Kirim ke WhatsApp
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Information Sidebar -->
+                <div class="pp-info-sidebar">
+                    <h3 class="pp-info-title">Informasi Penting</h3>
+                    
+                    <ul class="pp-info-list">
+                        <li><i class="fas fa-calendar-check"></i> <strong>Pendaftaran:</strong> 1 Januari - 31 Mei 2024</li>
+                        <li><i class="fas fa-calendar-alt"></i> <strong>Test Seleksi:</strong> 15-30 Juni 2024</li>
+                        <li><i class="fas fa-bullhorn"></i> <strong>Pengumuman:</strong> 10 Juli 2024</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Daftar Ulang:</strong> 15-25 Juli 2024</li>
+                    </ul>
+                    
+                    <h4 style="color: var(--pp-navy); margin-bottom: 1rem;">Proses Seleksi</h4>
+                    <ul class="pp-info-list">
+                        <li><i class="fas fa-file-check"></i> Seleksi administrasi (berkas)</li>
+                        <li><i class="fas fa-quran"></i> Test baca Al-Qur'an</li>
+                        <li><i class="fas fa-graduation-cap"></i> Test akademik (Matematika, IPA, Bahasa)</li>
+                        <li><i class="fas fa-comments"></i> Wawancara dengan calon santri & orang tua</li>
+                    </ul>
+                    
+                    <div class="pp-note-box">
+                        <div class="pp-note-title">Catatan:</div>
+                        <p class="pp-note-text">
+                            Setelah mengisi form ini, data akan dikirim ke WhatsApp kami. 
+                            Silakan siapkan berkas yang diperlukan dan kirim via WhatsApp 
+                            atau bawa langsung saat test seleksi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="../assets/Logo Peradaban2.png" alt="Logo Pesantren Peradaban">
+                    <div class="footer-logo-text">
+                        <h3>Pesantren Peradaban</h3>
+                        <p>Membangun Peradaban untuk Sejatinya Manusia</p>
+                    </div>
+                </div>
+                <p class="footer-about">Pesantren Peradaban adalah lembaga pendidikan Islam yang mengintegrasikan kurikulum nasional dengan pendidikan agama untuk membentuk generasi muslim yang unggul.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Program</h3>
+                <ul class="footer-links">
+                    <li><a href="smp-pesantren.html">SMP Pesantren</a></li>
+                    <li><a href="sma-fullday.html">SMA Full Day</a></li>
+                    <li><a href="sma-boarding.html">SMA Boarding</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Informasi</h3>
+                <ul class="footer-links">
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="kegiatan.html">Kegiatan Santri</a></li>
+                    <li><a href="alumni.html">Alumni & Testimoni</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="psb.html">PSB</a></li>
+                    <li><a href="fasilitas.html">Fasilitas</a></li>
+                    <li><a href="pengajar.html">Staf Pengajar</a></li>
+                    <li><a href="prestasi.html">Prestasi</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Kontak Kami</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Jl. Cintabodas, Kec. Culamega, Kabupaten Tasikmalaya, Jawa Barat 46188</li>
+                    <li><i class="fab fa-whatsapp"></i> 085210738001</li>
+                    <li><i class="fas fa-envelope"></i> pesantrenperadaban01@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 16:00</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pesantren Peradaban. Semua hak dilindungi.</p>
+            </div>
+    </div>
+</footer>
+
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variabel untuk form wizard
+            const form = document.getElementById('ppRegistrationForm');
+            const steps = document.querySelectorAll('.pp-form-step');
+            const progressSteps = document.querySelectorAll('.pp-progress-step');
+            const btnPrev = document.getElementById('pp-btn-prev');
+            const btnNext = document.getElementById('pp-btn-next');
+            const btnSubmit = document.getElementById('pp-btn-submit');
+            const whatsappSuccess = document.getElementById('pp-whatsapp-success');
+            const whatsappLink = document.getElementById('pp-whatsapp-link');
+            const backToFormBtn = document.getElementById('pp-back-to-form');
+            
+            let currentStep = 0;
+            const totalSteps = steps.length;
+            
+            // Initialize form
+            updateStepDisplay();
+            
+            // Next button click
+            btnNext.addEventListener('click', function() {
+                if (validateCurrentStep()) {
+                    if (currentStep < totalSteps - 1) {
+                        currentStep++;
+                        updateStepDisplay();
+                        scrollToTop();
+                    }
+                }
+            });
+            
+            // Previous button click
+            btnPrev.addEventListener('click', function() {
+                if (currentStep > 0) {
+                    currentStep--;
+                    updateStepDisplay();
+                    scrollToTop();
+                }
+            });
+            
+            // Back to form from success message
+            backToFormBtn.addEventListener('click', function() {
+                whatsappSuccess.classList.remove('show');
+                scrollToTop();
+            });
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateCurrentStep() && validateFinalStep()) {
+                    sendToWhatsApp();
+                }
+            });
+            
+            // Update step display
+            function updateStepDisplay() {
+                // Hide all steps
+                steps.forEach(step => {
+                    step.classList.remove('active');
+                });
+                
+                // Show current step
+                steps[currentStep].classList.add('active');
+                
+                // Update progress indicators
+                progressSteps.forEach((step, index) => {
+                    step.classList.remove('active', 'completed');
+                    
+                    if (index < currentStep) {
+                        step.classList.add('completed');
+                    } else if (index === currentStep) {
+                        step.classList.add('active');
+                    }
+                });
+                
+                // Update buttons
+                btnPrev.disabled = currentStep === 0;
+                
+                if (currentStep === totalSteps - 1) {
+                    btnNext.style.display = 'none';
+                    btnSubmit.style.display = 'flex';
+                    updateSummary();
+                } else {
+                    btnNext.style.display = 'flex';
+                    btnSubmit.style.display = 'none';
+                }
+            }
+            
+            // Validate current step
+            function validateCurrentStep() {
+                const currentStepElement = steps[currentStep];
+                const requiredFields = currentStepElement.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!validateField(field)) {
+                        isValid = false;
+                        field.classList.add('error');
+                        
+                        // Show error message
+                        let errorElement = field.parentNode.querySelector('.pp-error-message');
+                        if (!errorElement) {
+                            errorElement = document.createElement('div');
+                            errorElement.className = 'pp-error-message';
+                            errorElement.style.color = '#e74c3c';
+                            errorElement.style.fontSize = '0.85rem';
+                            errorElement.style.marginTop = '0.3rem';
+                            field.parentNode.appendChild(errorElement);
+                        }
+                        
+                        if (field.type === 'checkbox' || field.type === 'radio') {
+                            errorElement.textContent = 'Pilihan ini wajib diisi';
+                        } else if (field.type === 'select-one') {
+                            errorElement.textContent = 'Silakan pilih opsi';
+                        } else {
+                            errorElement.textContent = 'Field ini wajib diisi';
+                        }
+                    } else {
+                        field.classList.remove('error');
+                        const errorElement = field.parentNode.querySelector('.pp-error-message');
+                        if (errorElement) {
+                            errorElement.remove();
+                        }
+                    }
+                });
+                
+                // Validate email format
+                const emailFields = currentStepElement.querySelectorAll('input[type="email"]');
+                emailFields.forEach(field => {
+                    if (field.value.trim()) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(field.value)) {
+                            isValid = false;
+                            field.classList.add('error');
+                            
+                            let errorElement = field.parentNode.querySelector('.pp-error-message');
+                            if (!errorElement) {
+                                errorElement = document.createElement('div');
+                                errorElement.className = 'pp-error-message';
+                                errorElement.style.color = '#e74c3c';
+                                errorElement.style.fontSize = '0.85rem';
+                                errorElement.style.marginTop = '0.3rem';
+                                field.parentNode.appendChild(errorElement);
+                            }
+                            errorElement.textContent = 'Format email tidak valid';
+                        }
+                    }
+                });
+                
+                // Validate phone format
+                const phoneFields = currentStepElement.querySelectorAll('input[type="tel"]');
+                phoneFields.forEach(field => {
+                    if (field.value.trim()) {
+                        const phoneRegex = /^[0-9+\-\s()]{10,}$/;
+                        if (!phoneRegex.test(field.value)) {
+                            isValid = false;
+                            field.classList.add('error');
+                            
+                            let errorElement = field.parentNode.querySelector('.pp-error-message');
+                            if (!errorElement) {
+                                errorElement = document.createElement('div');
+                                errorElement.className = 'pp-error-message';
+                                errorElement.style.color = '#e74c3c';
+                                errorElement.style.fontSize = '0.85rem';
+                                errorElement.style.marginTop = '0.3rem';
+                                field.parentNode.appendChild(errorElement);
+                            }
+                            errorElement.textContent = 'Format nomor telepon tidak valid';
+                        }
+                    }
+                });
+                
+                return isValid;
+            }
+            
+            // Validate individual field
+            function validateField(field) {
+                if (field.type === 'checkbox') {
+                    return field.checked;
+                } else if (field.type === 'radio') {
+                    const radioGroup = document.querySelectorAll(`input[name="${field.name}"]`);
+                    return Array.from(radioGroup).some(radio => radio.checked);
+                } else if (field.type === 'select-one') {
+                    return field.value !== '';
+                } else {
+                    return field.value.trim() !== '';
+                }
+            }
+            
+            // Validate final step (checkboxes)
+            function validateFinalStep() {
+                const confirmData = document.getElementById('pp-confirm-data');
+                const agreeTerms = document.getElementById('pp-agree-terms');
+                
+                if (!confirmData.checked || !agreeTerms.checked) {
+                    alert('Harap centang semua persetujuan sebelum mengirim data.');
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            // Update summary
+            function updateSummary() {
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                
+                let summaryHTML = `
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <p><strong>Nama Santri:</strong><br>${data.nama_santri || '-'}</p>
+                            <p><strong>Tempat/Tgl Lahir:</strong><br>${data.tempat_lahir || '-'}, ${data.tanggal_lahir || '-'}</p>
+                            <p><strong>Sekolah Asal:</strong><br>${data.sekolah_asal || '-'}</p>
+                            <p><strong>Kelas Dituju:</strong><br>${data.kelas_dituju || '-'}</p>
+                        </div>
+                        <div>
+                            <p><strong>Program:</strong><br>${data.program_dipilih || '-'}</p>
+                            <p><strong>Tahun Ajaran:</strong><br>${data.tahun_ajaran || '-'}</p>
+                            <p><strong>Nama Ayah:</strong><br>${data.nama_ayah || '-'}</p>
+                            <p><strong>No. HP Ayah:</strong><br>${data.no_hp_ayah || '-'}</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--pp-gray);">
+                        <p><strong>Catatan:</strong> Data akan dikirim ke WhatsApp Pesantren Peradaban untuk proses selanjutnya.</p>
+                    </div>
+                `;
+                
+                document.getElementById('pp-summary-content').innerHTML = summaryHTML;
+            }
+            
+            // Send data to WhatsApp
+            function sendToWhatsApp() {
+                // Get form data
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Format date
+                const tanggalLahir = data.tanggal_lahir ? new Date(data.tanggal_lahir).toLocaleDateString('id-ID') : '';
+                
+                // Create WhatsApp message
+                let message = `*PENDAFTARAN SANTRI BARU - PESANTREN PERADABAN*%0A%0A`;
+                
+                message += `*DATA CALON SANTRI*%0A`;
+                message += `Nama Lengkap: ${data.nama_santri}%0A`;
+                message += `Nama Panggilan: ${data.nama_panggilan || '-'}%0A`;
+                message += `Tempat/Tgl Lahir: ${data.tempat_lahir}, ${tanggalLahir}%0A`;
+                message += `Jenis Kelamin: ${data.jenis_kelamin}%0A`;
+                message += `Agama: ${data.agama}%0A`;
+                message += `Alamat: ${data.alamat_santri}%0A`;
+                message += `No. HP: ${data.no_hp_santri || '-'}%0A`;
+                message += `Email: ${data.email_santri || '-'}%0A`;
+                message += `Sekolah Asal: ${data.sekolah_asal}%0A`;
+                message += `Kelas Dituju: ${data.kelas_dituju}%0A`;
+                message += `Hobi & Bakat: ${data.hobi_bakat || '-'}%0A%0A`;
+                
+                message += `*DATA ORANG TUA*%0A`;
+                message += `Status: ${data.status_ortu}%0A`;
+                message += `Nama Ayah: ${data.nama_ayah}%0A`;
+                message += `Pekerjaan Ayah: ${data.pekerjaan_ayah}%0A`;
+                message += `Pendidikan Ayah: ${data.pendidikan_ayah || '-'}%0A`;
+                message += `No. HP Ayah: ${data.no_hp_ayah}%0A`;
+                message += `Nama Ibu: ${data.nama_ibu}%0A`;
+                message += `Pekerjaan Ibu: ${data.pekerjaan_ibu}%0A`;
+                message += `Pendidikan Ibu: ${data.pendidikan_ibu || '-'}%0A`;
+                message += `No. HP Ibu: ${data.no_hp_ibu}%0A`;
+                message += `Email Orang Tua: ${data.email_ortu}%0A`;
+                message += `Alamat Orang Tua: ${data.alamat_ortu}%0A%0A`;
+                
+                message += `*PROGRAM & INFORMASI*%0A`;
+                message += `Program Dipilih: ${data.program_dipilih}%0A`;
+                message += `Tahun Ajaran: ${data.tahun_ajaran}%0A`;
+                message += `Cara Kirim Berkas: ${data.cara_kirim_berkas}%0A`;
+                message += `Sumber Informasi: ${data.tahu_dari}%0A`;
+                message += `Catatan: ${data.catatan_tambahan || '-'}%0A%0A`;
+                
+                message += `*BERKAS YANG DISIAPKAN*%0A`;
+                message += `☑ Foto 3x4: ${data.berkas_foto === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `☑ Rapor: ${data.berkas_rapor === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `☑ Akta Kelahiran: ${data.berkas_akta === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `☑ Kartu Keluarga: ${data.berkas_kk === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `☑ Surat Sehat: ${data.berkas_surat_sehat === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `☑ Surat Nilai: ${data.berkas_surat_nilai === 'Ya' ? 'Ya' : 'Tidak'}%0A%0A`;
+                
+                message += `*DATA PENDAFTARAN*%0A`;
+                message += `Tanggal: ${new Date().toLocaleDateString('id-ID')}%0A`;
+                message += `Waktu: ${new Date().toLocaleTimeString('id-ID')}%0A`;
+                message += `ID Pendaftaran: PP-${Date.now().toString().slice(-8)}`;
+                
+                // WhatsApp phone number (change this to your number)
+                const phoneNumber = '628567892884';
+                
+                // Create WhatsApp link
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+                
+                // Update WhatsApp link
+                whatsappLink.href = whatsappUrl;
+                
+                // Show success message
+                whatsappSuccess.classList.add('show');
+                
+                // Scroll to success message
+                whatsappSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Reset form after 5 seconds
+                setTimeout(() => {
+                    form.reset();
+                    currentStep = 0;
+                    updateStepDisplay();
+                }, 5000);
+                
+                // Log for debugging
+                console.log('WhatsApp URL:', whatsappUrl);
+                console.log('Form Data:', data);
+            }
+            
+            // Scroll to top of form
+            function scrollToTop() {
+                window.scrollTo({
+                    top: form.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // Real-time validation for fields
+            const formFields = form.querySelectorAll('.pp-form-control, input[type="radio"], input[type="checkbox"]');
+            formFields.forEach(field => {
+                if (field.type === 'text' || field.type === 'email' || field.type === 'tel' || field.type === 'date') {
+                    field.addEventListener('blur', function() {
+                        validateField(this);
+                    });
+                    
+                    field.addEventListener('input', function() {
+                        this.classList.remove('error');
+                        const errorElement = this.parentNode.querySelector('.pp-error-message');
+                        if (errorElement) {
+                            errorElement.remove();
+                        }
+                    });
+                }
+            });
+            
+            // Auto-format phone numbers
+            const phoneInputs = form.querySelectorAll('input[type="tel"]');
+            phoneInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    let value = this.value.replace(/\D/g, '');
+                    
+                    if (value.length > 0) {
+                        if (value.startsWith('0')) {
+                            value = '62' + value.substring(1);
+                        } else if (!value.startsWith('62')) {
+                            value = '62' + value;
+                        }
+                    }
+                    
+                    this.value = value;
+                });
+            });
+            
+            // Initialize page components
+            if (typeof pp_initPageComponents === 'function') {
+                pp_initPageComponents();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معهد برادابان - تعليم إسلامي متميز</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/logo-peradaban-1.png" type="image/png">
+</head>
+<body class="lang-rtl">
+    <!-- Header & Navigation -->
+    <header class="header header-transparent">
+        <div class="container">
+            <nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="assets/Logo Peradaban2.png" alt="Logo Pesantren Peradaban">
+        <div class="logo-text">
+            <span class="logo-title"></span>
+            <span class="logo-subtitle"></span>
+        </div>
+    </a>
+    
+    <div class="nav-menu" id="navMenu">
+        <a href="index-ar.html" class="nav-link">الرئيسية</a>
+        <div class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle">البرامج <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+                <a href="pages/smp-pesantren.html" class="dropdown-item">المرحلة المتوسطة بالمعهد</a>
+                <a href="pages/sma-fullday.html" class="dropdown-item">الثانوية دوام كامل</a>
+                <a href="pages/sma-boarding.html" class="dropdown-item">الثانوية الداخلية</a>
+            </div>
+        </div>
+        <a href="pages/fasilitas.html" class="nav-link">المرافق</a>
+        <a href="pages/tentang.html" class="nav-link">من نحن</a>
+        <div class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle">معلومات <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+                <a href="pages/profil.html" class="dropdown-item">ملف المعهد</a>
+                <a href="pages/kegiatan.html" class="dropdown-item">أنشطة الطلاب</a>
+                <a href="pages/alumni.html" class="dropdown-item">الخريجون والشهادات</a>
+                <a href="pages/faq.html" class="dropdown-item">FAQ</a>
+                <a href="pages/prestasi.html" class="dropdown-item">الإنجازات</a>
+                <a href="pages/kontak.html" class="dropdown-item">اتصل بنا</a>
+            </div>
+        </div>
+        <a href="pages/pengajar.html" class="nav-link">المعلّمون</a>
+        <div class="lang-switch">
+            <a href="index.html" class="lang-link">ID</a>
+            <a href="index-en.html" class="lang-link">EN</a>
+            <a href="index-ar.html" class="lang-link active">AR</a>
+        </div>
+        <a href="https://s.id/psbpesantrenperadaban26" class="btn-nav">سجّل الآن</a>
+    </div>
+    
+    <button class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero-section">
+        <div class="carousel-container">
+
+            <!-- Slide 1: Info PSB -->
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('assets/heroPSB.png');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-tag">قبول طلاب جدد</div>
+                    <h1 class="slide-title">تم فتح القبول للعام الدراسي <span>2026/2027</span>!</h1>
+                    <p class="slide-description">سجّل أبناءكم الآن! المقاعد محدودة. احصل على خصم للتسجيل المبكر.</p>
+                    <div class="slide-buttons">
+                        <a href="https://s.id/psbpesantrenperadaban26" class="btn btn-primary">سجّل عبر الإنترنت</a>
+                        <a href="pages/kontak.html" class="btn btn-secondary">المزيد من المعلومات</a>
+                    </div>
+                </div>
+            </div>
+
+                        
+            <!-- Slide 2: Keunggulan Pesantren -->
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('assets/heroKeunggulan.jpeg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-tag">نقاط تميزنا</div>
+                    <h1 class="slide-title">بناء <span>جيل قرآني</span> ذو أخلاق رفيعة</h1>
+                    <p class="slide-description">بمنهج متكامل، ومعلمين متميزين، وبيئة تعليمية إسلامية مناسبة لتطوير الطلاب.</p>
+                    <div class="slide-buttons">
+                        <a href="pages/tentang.html" class="btn btn-primary">ملف المعهد</a>
+                        <a href="pages/fasilitas.html" class="btn btn-secondary">عرض المرافق</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: SMA Full Day -->
+
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('assets/heroSMAF.jpeg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-tag">البرامج المميزة</div>
+                    <h1 class="slide-title"><span>الثانوية دوام كامل</span> - تعليم إسلامي لجيل قرآني</h1>
+                    <p class="slide-description">نظام دوام كامل مع تعليم ديني مكثف، مناسب لمن يريد تعليم المعهد دون السكن الداخلي.</p>
+                    <div class="slide-buttons">
+                        <a href="pages/sma-fullday.html" class="btn btn-primary">المزيد</a>
+                        <a href="https://s.id/psbpesantrenperadaban26" class="btn btn-secondary">سجّل الآن</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 4: SMA Boarding -->
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('assets/heroSMAB.jpeg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-tag">البرامج المميزة</div>
+                    <h1 class="slide-title"><span>الثانوية الداخلية</span> - تعليم إسلامي على مدار 24 ساعة</h1>
+                    <p class="slide-description">تعليم داخلي مكثف يصنع طلابًا مستقلين ومنضبطين وذوي أخلاق رفيعة طوال اليوم.</p>
+                    <div class="slide-buttons">
+                        <a href="pages/sma-boarding.html" class="btn btn-primary">المزيد</a>
+                        <a href="https://s.id/psbpesantrenperadaban26" class="btn btn-secondary">سجّل الآن</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 5: SMP Pesantren -->
+            <div class="carousel-slide active">
+                <div class="slide-bg" style="background-image: url('assets/heroSMP.png');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="slide-tag">البرامج المميزة</div>
+                    <h1 class="slide-title"><span>المرحلة المتوسطة بالمعهد</span> - دمج العلوم العامة والدينية</h1>
+                    <p class="slide-description">تربية إسلامية مبكرة بمنهج متكامل يجمع المنهج الوطني والتعليم الإسلامي.</p>
+                    <div class="slide-buttons">
+                        <a href="pages/smp-pesantren.html" class="btn btn-primary">المزيد</a>
+                        <a href="https://s.id/psbpesantrenperadaban26" class="btn btn-secondary">سجّل الآن</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Navigation arrows -->
+            <button class="carousel-arrow carousel-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-arrow carousel-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Navigation dots -->
+            <div class="carousel-nav">
+                <div class="carousel-progress" role="progressbar" aria-label="Progress slide">
+                    <div class="carousel-progress-segments" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- البرامج المميزة Section -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span>البرامج</span> المميزة</h2>
+                <p class="section-subtitle">اختر البرنامج التعليمي المناسب لأبنائكم</p>
+            </div>
+            
+            <div class="program-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3 class="program-title">المرحلة المتوسطة بالمعهد</h3>
+                    <p class="program-description">تعليم متكامل لطلاب المرحلة المتوسطة مع التركيز على بناء الشخصية الإسلامية منذ الصغر.</p>
+                    <a href="pages/smp-pesantren.html" class="program-link">المزيد <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="program-title">الثانوية دوام كامل</h3>
+                    <p class="program-description">نظام دوام كامل يجمع التعليم الرسمي والديني دون السكن الداخلي.</p>
+                    <a href="pages/sma-fullday.html" class="program-link">المزيد <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="program-title">الثانوية الداخلية</h3>
+                    <p class="program-description">تعليم داخلي مكثف 24 ساعة لتكوين شخصية مسلمة مستقلة ومنضبطة.</p>
+                    <a href="pages/sma-boarding.html" class="program-link">المزيد <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas Unggulan Section -->
+    <section class="facility-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">المرافق <span>المميزة</span></h2>
+                <p class="section-subtitle">ندعم التعلم بمرافق حديثة ومريحة</p>
+            </div>
+            
+            <div class="facility-grid">
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="assets/images/fasilitas-1.jpg" alt="مكتبة حديثة">
+                    </div>
+                    <div class="facility-content">
+                        <h3 class="facility-title">مكتبة حديثة</h3>
+                        <p class="facility-description">مجموعة كاملة من الكتب الدينية والعامة والرقمية لدعم التعلم.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="assets/images/fasilitas-2.jpg" alt="مختبر الحاسوب">
+                    </div>
+                    <div class="facility-content">
+                        <h3 class="facility-title">مختبر الحاسوب</h3>
+                        <p class="facility-description">أحدث تجهيزات الحاسوب للتعلم التقني والرقمي.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="assets/images/fasilitas-3.jpg" alt="سكن مريح">
+                    </div>
+                    <div class="facility-content">
+                        <h3 class="facility-title">سكن مريح</h3>
+                        <p class="facility-description">غرف سكن مريحة مع تجهيزات كاملة لإقامة الطلاب.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="pages/fasilitas.html" class="btn btn-outline">عرض جميع المرافق</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengajar Berpengalaman Section -->
+    <section class="teacher-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">المعلّمون <span>ذوو الخبرة</span></h2>
+                <p class="section-subtitle">يُدرّس على أيدي معلمين وأساتذة أكفاء في مجالاتهم</p>
+            </div>
+            
+            <div class="teacher-grid">
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="assets/images/pengajar-1.jpg" alt="الأستاذ أحمد، M.Pd">
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">الأستاذ أحمد&nbsp;M.Pd</h3>
+                        <p class="teacher-subject">مدرس تحفيظ وقرآن</p>
+                        <p class="teacher-bio">خريج جامعة الأزهر بخبرة 10 سنوات في تدريس التحفيظ.</p>
+                    </div>
+                </div>
+                
+                <div class="teacher-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">٥٠+</div>
+                        <div class="stat-label">معلمون مؤهلون</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">٨٠٪</div>
+                        <div class="stat-label">حملة ماجستير/دكتوراه</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">١٥+</div>
+                        <div class="stat-label">سنوات خبرة</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="pages/pengajar.html" class="btn btn-outline">عرض ملفات المعلمين</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestasi Santri Section -->
+    <section class="achievement-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">إنجازات <span>الطلاب</span></h2>
+                <p class="section-subtitle">نفتخر بالإنجازات التي حققها طلاب معهد برادابان</p>
+            </div>
+            
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="achievement-title">المركز الأول في مسابقة التلاوة الوطنية للقرآن</h3>
+                    <p class="achievement-description">حقق طلابنا المركز الأول في المسابقة الوطنية لتلاوة القرآن عام 2023.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="achievement-title">أولمبياد العلوم</h3>
+                    <p class="achievement-description">حاصل على الميدالية الفضية في أولمبياد العلوم الوطني لمادة الرياضيات عام 2023.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="achievement-title">حافظ 30 جزءًا</h3>
+                    <p class="achievement-description">أتم 10 طلاب حفظ 30 جزءًا خلال العامين الماضيين.</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="pages/prestasi.html" class="btn btn-outline">عرض المزيد من الإنجازات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">انضم إلى <span>معهد برادابان</span></h2>
+                <p class="cta-description">معنا نبني جيلاً قرآنيًا متميزًا في العلم والعمل والأخلاق.</p>
+                <div class="cta-buttons">
+                    <a href="https://s.id/psbpesantrenperadaban26" class="btn btn-primary">سجّل الآن</a>
+                    <a href="pages/kontak.html" class="btn btn-secondary">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="assets/Logo Peradaban2.png" alt="شعار معهد برادابان">
+                    <div class="footer-logo-text">
+                        <h3>معهد التمدّن</h3>
+                        <p>نبني الحضارة للإنسان الحق</p>
+                    </div>
+                </div>
+                <p class="footer-about">معهد التمدّن مؤسسة تعليمية إسلامية تدمج المنهج الوطني بالتعليم الديني لتكوين جيل مسلم متميز.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">البرامج</h3>
+                <ul class="footer-links">
+                    <li><a href="smp-pesantren.html">المرحلة المتوسطة بالمعهد</a></li>
+                    <li><a href="sma-fullday.html">الثانوية دوام كامل</a></li>
+                    <li><a href="sma-boarding.html">الثانوية الداخلية</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">معلومات</h3>
+                <ul class="footer-links">
+                    <li><a href="tentang.html">من نحن</a></li>
+                    <li><a href="profil.html">ملف المعهد</a></li>
+                    <li><a href="kegiatan.html">أنشطة الطلاب</a></li>
+                    <li><a href="alumni.html">الخريجون والشهادات</a></li>
+                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    <li><a href="fasilitas.html">المرافق</a></li>
+                    <li><a href="pengajar.html">هيئة التدريس</a></li>
+                    <li><a href="prestasi.html">الإنجازات</a></li>
+                    <li><a href="kontak.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">اتصل بنا</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> شارع جنتابوداس، مقاطعة كولاميغا، تاسيكماﻻيا، جاوة الغربية 46188</li>
+                    <li><i class="fab fa-whatsapp"></i> ٠٨٥٢ ١٠٧٣-٨٠٠١</li>
+                    <li><i class="fas fa-envelope"></i> pesantrenperadaban.id@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> الاثنين - الجمعة: ٠٨:٠٠ - ١٦:٠٠</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 معهد التمدّن. جميع الحقوق محفوظة.</p>
+            </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

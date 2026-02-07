@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staf Pengajar - Pesantren Peradaban</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/logo-peradaban-1.png" type="image/png">
+</head>
+<body class="pp-page-pengajar">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+    <a href="../index.html" class="logo">
+        <img src="../assets/Logo Peradaban2.png" alt="Logo Pesantren Peradaban">
+        <div class="logo-text">
+            <span class="logo-title"></span>
+            <span class="logo-subtitle"></span>
+        </div>
+    </a>
+    
+    <div class="nav-menu" id="navMenu">
+        <a href="../index.html" class="nav-link">Beranda</a>
+        <div class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Program <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+                <a href="smp-pesantren.html" class="dropdown-item">SMP Pesantren</a>
+                <a href="sma-fullday.html" class="dropdown-item">SMA Full Day</a>
+                <a href="sma-boarding.html" class="dropdown-item">SMA Boarding</a>
+            </div>
+        </div>
+        <a href="fasilitas.html" class="nav-link">Fasilitas</a>
+        <a href="tentang.html" class="nav-link">Tentang Kami</a>
+        <div class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Informasi <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+                <a href="kegiatan.html" class="dropdown-item">Kegiatan Santri</a>
+                <a href="galeri.html" class="dropdown-item">Galeri Kegiatan</a>
+                <a href="alumni.html" class="dropdown-item">Alumni & Testimoni</a>
+                <a href="faq.html" class="dropdown-item">FAQ</a>
+                <a href="prestasi.html" class="dropdown-item">Prestasi</a>
+                <a href="kontak.html" class="dropdown-item">Kontak</a>
+            </div>
+        </div>
+        <a href="pengajar.html" class="nav-link">Pengajar</a>
+        <a href="https://s.id/psbpesantrenperadaban26" class="btn-nav">Daftar Sekarang</a>
+    </div>
+    
+    <button class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="pp-page-header">
+        <div class="pp-container">
+            <div class="pp-page-header-content">
+                <h1 class="pp-page-title">Staf Pengajar</h1>
+                <p class="pp-page-subtitle">Dididik oleh Guru dan Ustadz yang Kompeten, Berpengalaman, dan Berdedikasi</p>
+                <div class="pp-breadcrumb">
+                    <a href="../index.html">Beranda</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Staf Pengajar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teacher Stats -->
+    <section class="pp-page-content">
+        <div class="pp-container">
+            <div class="pp-teacher-stats">
+                <h2 class="pp-teacher-stats-title">Pengajar <span>Berkualitas</span></h2>
+                <p class="pp-teacher-stats-desc">Komitmen kami untuk menyediakan pendidikan terbaik dengan pengajar yang profesional dan berkompeten di bidangnya.</p>
+                
+                <div class="pp-stats-grid">
+                    <div class="pp-stat-item">
+                        <div class="pp-stat-number pp-counter" data-target="52">0</div>
+                        <div class="pp-stat-label">Total Pengajar</div>
+                    </div>
+                    <div class="pp-stat-item">
+                        <div class="pp-stat-number pp-counter" data-target="42">0</div>
+                        <div class="pp-stat-label">Bergelar S2/S3</div>
+                    </div>
+                    <div class="pp-stat-item">
+                        <div class="pp-stat-number pp-counter" data-target="15">0</div>
+                        <div class="pp-stat-label">Tahun Rata-rata Pengalaman</div>
+                    </div>
+                    <div class="pp-stat-item">
+                        <div class="pp-stat-number pp-counter" data-target="8">0</div>
+                        <div class="pp-stat-label">Guru Berprestasi Nasional</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teacher Filter -->
+    <section class="pp-page-content pp-section-light">
+        <div class="pp-container">
+            <div class="pp-teacher-filter">
+                <button class="pp-filter-btn active" data-filter="all">Semua Pengajar</button>
+                <button class="pp-filter-btn" data-filter="tahfiz">Pengajar Tahfiz</button>
+                <button class="pp-filter-btn" data-filter="umum">Pengajar Umum</button>
+                <button class="pp-filter-btn" data-filter="pimpinan">Pimpinan Pesantren</button>
+                <button class="pp-filter-btn" data-filter="asatidz">Asatidz Senior</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers by Category -->
+    <section class="pp-page-content">
+        <div class="pp-container">
+            <!-- Pimpinan Pesantren -->
+            <div class="pp-teacher-category" data-category="pimpinan">
+                <h2 class="pp-category-title">Pimpinan Pesantren</h2>
+                <div class="pp-teacher-grid">
+                    <!-- Teacher 1 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-1.jpg" alt="KH. Dr. Ahmad Fauzi, M.A.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">KH. Dr. Ahmad Fauzi, M.A.</h3>
+                            <p class="pp-teacher-subject">Pimpinan Pesantren / Guru Fiqh</p>
+                            <p class="pp-teacher-bio">Lulusan Universitas Al-Azhar Kairo dan Universitas Islam Madinah dengan pengalaman 25 tahun dalam pendidikan pesantren.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S3 Pendidikan Islam - Universitas Al-Azhar</p>
+                                <p><i class="fas fa-award"></i> Pengalaman 25 tahun mengajar</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teacher 2 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-2.jpg" alt="Dr. Siti Maryam, M.Pd.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Dr. Siti Maryam, M.Pd.</h3>
+                            <p class="pp-teacher-subject">Wakil Pimpinan / Guru Bahasa Arab</p>
+                            <p class="pp-teacher-bio">Doktor Pendidikan Bahasa Arab dari UIN Jakarta dengan spesialisasi metode pengajaran bahasa Arab untuk non-Arab.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S3 Pendidikan Bahasa Arab - UIN Jakarta</p>
+                                <p><i class="fas fa-award"></i> Penulis 5 buku panduan bahasa Arab</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 3 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-4.jpg" alt="Dr. H. Ridwan Hakim, M.Pd.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Dr. H. Ridwan Hakim, M.Pd.</h3>
+                            <p class="pp-teacher-subject">Kepala Sekolah / Manajemen Pendidikan</p>
+                            <p class="pp-teacher-bio">Berpengalaman memimpin sekolah menengah berbasis pesantren, fokus pada peningkatan mutu akademik dan karakter.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S3 Manajemen Pendidikan - UPI</p>
+                                <p><i class="fas fa-award"></i> Pengalaman 18 tahun di bidang pendidikan</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pengajar Tahfiz -->
+            <div class="pp-teacher-category" data-category="tahfiz">
+                <h2 class="pp-category-title">Pengajar Tahfiz & Al-Qur'an</h2>
+                <div class="pp-teacher-grid">
+                    <!-- Teacher 3 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-3.jpg" alt="Ustadz Muhammad Hafiz, S.Q.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Ustadz Muhammad Hafiz, S.Q.</h3>
+                            <p class="pp-teacher-subject">Guru Tahfiz & Qira'ah</p>
+                            <p class="pp-teacher-bio">Hafiz 30 juz, juara 1 MTQ Nasional 2018, spesialis metode cepat menghafal Al-Qur'an dengan sistem talaqqi.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S1 Ilmu Al-Qur'an - Institut Ilmu Al-Qur'an</p>
+                                <p><i class="fas fa-award"></i> Juara 1 MTQ Nasional 2018</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teacher 4 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-4.jpg" alt="Ustadzah Fatimah Zahra, M.A.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Ustadzah Fatimah Zahra, M.A.</h3>
+                            <p class="pp-teacher-subject">Guru Tahsin & Tajwid</p>
+                            <p class="pp-teacher-bio">Spesialis ilmu tajwid dan tahsin, lulusan Darul Qur'an Jakarta dengan sanad qira'ah sampai Rasulullah SAW.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S2 Ilmu Qira'at - Universitas Islam Madinah</p>
+                                <p><i class="fas fa-award"></i> Memiliki sanad mutawatir</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teacher 5 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-5.jpg" alt="Ustadz Abdullah Al-Qudsy, S.Pd.I.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Ustadz Abdullah Al-Qudsy, S.Pd.I.</h3>
+                            <p class="pp-teacher-subject">Guru Tafsir & Ulumul Qur'an</p>
+                            <p class="pp-teacher-bio">Ahli tafsir Al-Qur'an kontemporer dengan pendekatan tematik, membuat Al-Qur'an relevan dengan kehidupan modern.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S1 Pendidikan Islam - UIN Bandung</p>
+                                <p><i class="fas fa-award"></i> Peneliti tafsir tematik</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pengajar Umum -->
+            <div class="pp-teacher-category" data-category="umum">
+                <h2 class="pp-category-title">Pengajar Mata Pelajaran Umum</h2>
+                <div class="pp-teacher-grid">
+                    <!-- Teacher 6 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-6.jpg" alt="Drs. Bambang Susanto, M.Pd.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Drs. Bambang Susanto, M.Pd.</h3>
+                            <p class="pp-teacher-subject">Guru Matematika</p>
+                            <p class="pp-teacher-bio">Pengajar matematika dengan metode kreatif, membuat matematika menjadi menyenangkan dan mudah dipahami.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S2 Pendidikan Matematika - Universitas Pendidikan Indonesia</p>
+                                <p><i class="fas fa-award"></i> Penulis buku matematika SMA</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-researchgate"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teacher 7 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-7.jpg" alt="Ibu Sri Handayani, M.Pd.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Ibu Sri Handayani, M.Pd.</h3>
+                            <p class="pp-teacher-subject">Guru IPA & Biologi</p>
+                            <p class="pp-teacher-bio">Spesialis pengajaran IPA berbasis eksperimen, mengajak siswa belajar sains melalui pengamatan langsung.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S2 Pendidikan IPA - Universitas Negeri Jakarta</p>
+                                <p><i class="fas fa-award"></i> Inovator pembelajaran IPA</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-researchgate"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teacher 8 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-8.jpg" alt="Bapak Agus Setiawan, S.Pd., M.Ed.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Bapak Agus Setiawan, S.Pd., M.Ed.</h3>
+                            <p class="pp-teacher-subject">Guru Bahasa Inggris</p>
+                            <p class="pp-teacher-bio">Pengajar bahasa Inggris dengan sertifikasi TESOL, fokus pada communicative approach untuk penguasaan praktis.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S2 Pendidikan Bahasa Inggris - Monash University</p>
+                                <p><i class="fas fa-award"></i> Certified TESOL Instructor</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Asatidz Senior -->
+            <div class="pp-teacher-category" data-category="asatidz">
+                <h2 class="pp-category-title">Asatidz Senior</h2>
+                <div class="pp-teacher-grid">
+                    <!-- Teacher 9 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-9.jpg" alt="Ustadz KH. Mochammad Yasin, Lc.">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Ustadz KH. Mochammad Yasin, Lc.</h3>
+                            <p class="pp-teacher-subject">Guru Akidah & Akhlak</p>
+                            <p class="pp-teacher-bio">Ahli akidah Ahlussunnah wal Jama'ah dengan pengalaman 30 tahun mengajar, membimbing ribuan santri.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> Lc. Syariah - Universitas Islam Madinah</p>
+                                <p><i class="fas fa-award"></i> Pengalaman 30+ tahun mengajar</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teacher 10 -->
+                    <div class="pp-teacher-card">
+                        <div class="pp-teacher-img">
+                            <img src="../assets/images/pengajar-10.jpg" alt="Ustadzah Dra. Siti Aisyah">
+                        </div>
+                        <div class="pp-teacher-info">
+                            <h3 class="pp-teacher-name">Ustadzah Dra. Siti Aisyah</h3>
+                            <p class="pp-teacher-subject">Guru Fiqh Wanita & Sirah Nabawiyah</p>
+                            <p class="pp-teacher-bio">Pakar fiqh khusus wanita dan sejarah Nabi Muhammad SAW, mengajar dengan pendekatan kisah yang inspiratif.</p>
+                            <div class="pp-teacher-qualification">
+                                <p><i class="fas fa-graduation-cap"></i> S1 Pendidikan Agama Islam - IAIN Sunan Gunung Djati</p>
+                                <p><i class="fas fa-award"></i> Penulis buku sirah nabawiyah</p>
+                            </div>
+                            <div class="pp-teacher-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Methodology -->
+    <section class="pp-page-content pp-section-light">
+        <div class="pp-container">
+            <h2 class="pp-category-title text-center">Metode <span>Pengajaran</span></h2>
+            <p class="pp-section-intro">
+                Kami menerapkan berbagai metode pengajaran modern yang disesuaikan dengan karakteristik setiap mata pelajaran
+            </p>
+            
+            <div class="pp-grid pp-grid-3cols">
+                <div class="pp-card">
+                    <div class="pp-feature-icon pp-feature-icon-center">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="pp-feature-title">Talaqqi & Musyafahah</h3>
+                    <p class="pp-feature-desc">Metode langsung dari guru ke murid untuk pembelajaran Al-Qur'an dan ilmu agama, menjaga sanad keilmuan.</p>
+                </div>
+                
+                <div class="pp-card">
+                    <div class="pp-feature-icon pp-feature-icon-center">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="pp-feature-title">Project-Based Learning</h3>
+                    <p class="pp-feature-desc">Pembelajaran berbasis proyek untuk mata pelajaran sains dan teknologi, mengembangkan keterampilan praktis.</p>
+                </div>
+                
+                <div class="pp-card">
+                    <div class="pp-feature-icon pp-feature-icon-center">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="pp-feature-title">Collaborative Learning</h3>
+                    <p class="pp-feature-desc">Pembelajaran kolaboratif dalam kelompok kecil untuk mengembangkan kemampuan sosial dan teamwork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ingin Bergabung sebagai <span>Pengajar?</span></h2>
+                <p class="cta-description">Kami selalu membuka kesempatan bagi guru dan ustadz/ustadzah yang berkompeten untuk bergabung dengan tim pengajar Pesantren Peradaban.</p>
+                <div class="cta-buttons">
+                    <a href="kontak.html?subject=Lamaran Pengajar" class="btn btn-primary">Kirim Lamaran</a>
+                    <a href="fasilitas.html" class="btn btn-secondary">Lihat Fasilitas Pengajar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="../assets/Logo Peradaban2.png" alt="Logo Pesantren Peradaban">
+                    <div class="footer-logo-text">
+                        <h3>Pesantren Peradaban</h3>
+                        <p>Membangun Peradaban untuk Sejatinya Manusia</p>
+                    </div>
+                </div>
+                <p class="footer-about">Pesantren Peradaban adalah lembaga pendidikan Islam yang mengintegrasikan kurikulum nasional dengan pendidikan agama untuk membentuk generasi muslim yang unggul.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Program</h3>
+                <ul class="footer-links">
+                    <li><a href="smp-pesantren.html">SMP Pesantren</a></li>
+                    <li><a href="sma-fullday.html">SMA Full Day</a></li>
+                    <li><a href="sma-boarding.html">SMA Boarding</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Informasi</h3>
+                <ul class="footer-links">
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="kegiatan.html">Kegiatan Santri</a></li>
+                    <li><a href="alumni.html">Alumni & Testimoni</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="psb.html">PSB</a></li>
+                    <li><a href="fasilitas.html">Fasilitas</a></li>
+                    <li><a href="pengajar.html">Staf Pengajar</a></li>
+                    <li><a href="prestasi.html">Prestasi</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">Kontak Kami</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Jl. Cintabodas, Kec. Culamega, Kabupaten Tasikmalaya, Jawa Barat 46188</li>
+                    <li><i class="fab fa-whatsapp"></i> 085210738001</li>
+                    <li><i class="fas fa-envelope"></i> pesantrenperadaban01@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 16:00</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pesantren Peradaban. Semua hak dilindungi.</p>
+            </div>
+    </div>
+</footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // JavaScript khusus untuk halaman pengajar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.pp-filter-btn');
+            const teacherCategories = document.querySelectorAll('.pp-teacher-category');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide teacher categories based on filter
+                    teacherCategories.forEach(category => {
+                        const categoryType = category.getAttribute('data-category');
+                        
+                        if (filterValue === 'all' || filterValue === categoryType) {
+                            category.style.display = 'block';
+                            setTimeout(() => {
+                                category.style.opacity = '1';
+                                category.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            category.style.opacity = '0';
+                            category.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                category.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Teacher modal functionality
+            const teacherCards = document.querySelectorAll('.pp-teacher-card');
+            
+            teacherCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const teacherName = this.querySelector('.pp-teacher-name').textContent;
+                    const teacherSubject = this.querySelector('.pp-teacher-subject').textContent;
+                    const teacherBio = this.querySelector('.pp-teacher-bio').textContent;
+                    const teacherQualification = this.querySelector('.pp-teacher-qualification').innerHTML;
+                    const teacherImg = this.querySelector('img').src;
+                    
+                    // Create modal
+                    const modal = document.createElement('div');
+                    modal.className = 'pp-teacher-modal';
+                    modal.innerHTML = `
+                        <div class="pp-modal-content">
+                            <span class="pp-modal-close">&times;</span>
+                            <div class="pp-modal-body">
+                                <div class="pp-modal-teacher">
+                                    <div class="pp-modal-img">
+                                        <img src="${teacherImg}" alt="${teacherName}">
+                                    </div>
+                                    <div class="pp-modal-info">
+                                        <h2>${teacherName}</h2>
+                                        <h3>${teacherSubject}</h3>
+                                        <p>${teacherBio}</p>
+                                        <div class="pp-modal-details">
+                                            ${teacherQualification}
+                                            <p><strong>Metode Pengajaran:</strong> Kombinasi ceramah, diskusi, dan praktik dengan pendekatan student-centered learning.</p>
+                                            <p><strong>Motto:</strong> "Mendidik dengan hati, mengajar dengan keteladanan"</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    document.body.appendChild(modal);
+                    
+                    // Show modal with animation
+                    setTimeout(() => {
+                        modal.style.display = 'flex';
+                    }, 10);
+                    
+                    // Close modal
+                    modal.querySelector('.pp-modal-close').addEventListener('click', function() {
+                        modal.style.opacity = '0';
+                        setTimeout(() => {
+                            document.body.removeChild(modal);
+                        }, 300);
+                    });
+                    
+                    // Close modal when clicking outside
+                    modal.addEventListener('click', function(e) {
+                        if (e.target === modal) {
+                            modal.style.opacity = '0';
+                            setTimeout(() => {
+                                document.body.removeChild(modal);
+                            }, 300);
+                        }
+                    });
+                    
+                    // Add modal styles if not already added
+                    if (!document.querySelector('#pp-teacher-modal-styles')) {
+                        const style = document.createElement('style');
+                        style.id = 'pp-teacher-modal-styles';
+                        style.textContent = `
+                            .pp-teacher-modal {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.8);
+                                z-index: 10000;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 2rem;
+                                opacity: 0;
+                                transition: opacity 0.3s ease;
+                            }
+                            .pp-modal-content {
+                                background-color: white;
+                                border-radius: 12px;
+                                max-width: 900px;
+                                width: 100%;
+                                max-height: 90vh;
+                                overflow-y: auto;
+                                position: relative;
+                                transform: translateY(-20px);
+                                transition: transform 0.3s ease;
+                            }
+                            .pp-teacher-modal[style*="display: flex"] {
+                                opacity: 1;
+                            }
+                            .pp-teacher-modal[style*="display: flex"] .pp-modal-content {
+                                transform: translateY(0);
+                            }
+                            .pp-modal-close {
+                                position: absolute;
+                                top: 1rem;
+                                right: 1.5rem;
+                                font-size: 2rem;
+                                color: var(--pp-navy);
+                                cursor: pointer;
+                                z-index: 10001;
+                                width: 40px;
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50%;
+                                transition: all 0.3s ease;
+                            }
+                            .pp-modal-close:hover {
+                                background-color: var(--pp-light-gray);
+                            }
+                            .pp-modal-body {
+                                padding: 3rem;
+                            }
+                            .pp-modal-teacher {
+                                display: grid;
+                                grid-template-columns: 1fr 2fr;
+                                gap: 3rem;
+                            }
+                            .pp-modal-img {
+                                border-radius: 12px;
+                                overflow: hidden;
+                                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                            }
+                            .pp-modal-img img {
+                                width: 100%;
+                                height: auto;
+                                display: block;
+                            }
+                            .pp-modal-info h2 {
+                                color: var(--pp-navy);
+                                margin-bottom: 0.5rem;
+                                font-size: 1.8rem;
+                            }
+                            .pp-modal-info h3 {
+                                color: var(--pp-gold);
+                                margin-bottom: 1.5rem;
+                                font-size: 1.2rem;
+                            }
+                            .pp-modal-info p {
+                                color: var(--pp-dark-gray);
+                                line-height: 1.6;
+                                margin-bottom: 1.5rem;
+                            }
+                            .pp-modal-details p {
+                                margin-bottom: 0.8rem;
+                                display: flex;
+                                align-items: flex-start;
+                                gap: 0.8rem;
+                            }
+                            .pp-modal-details i {
+                                color: var(--pp-gold);
+                                margin-top: 0.2rem;
+                                flex-shrink: 0;
+                            }
+                            @media (max-width: 768px) {
+                                .pp-modal-teacher {
+                                    grid-template-columns: 1fr;
+                                }
+                                .pp-modal-body {
+                                    padding: 2rem;
+                                }
+                            }
+                        `;
+                        document.head.appendChild(style);
+                    }
+                });
+            });
+            
+            // Counter animation
+            const counters = document.querySelectorAll('.pp-counter');
+            
+            function animateCounter(element, target, duration = 2000) {
+                const start = 0;
+                const increment = target / (duration / 16);
+                let current = start;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, 16);
+            }
+            
+            // Initialize counters when in viewport
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        
+                        if (!counter.classList.contains('animated')) {
+                            counter.classList.add('animated');
+                            animateCounter(counter, target);
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+            
+            // Inisialisasi komponen halaman
+            if (typeof pp_initPageComponents === 'function') {
+                pp_initPageComponents();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
