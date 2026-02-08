@@ -68,6 +68,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function setupMobileNavigation() {
         if (!navToggle || !navMenu || !navOverlay) return;
 
+        function closeAllDropdowns() {
+            document.querySelectorAll('.dropdown.active, .dropdown-mobile.active').forEach(dropdown => {
+                dropdown.classList.remove('active');
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                if (toggle) {
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
         // Set accessibility attributes
         navToggle.setAttribute('aria-label', 'Toggle navigation menu');
         navToggle.setAttribute('aria-controls', 'navMenu');
@@ -97,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navToggle.innerHTML = '<i class="fas fa-bars"></i>';
             navToggle.setAttribute('aria-expanded', 'false');
             isNavOpen = false;
+            closeAllDropdowns();
             
             // Restore focus
             navToggle.focus();
@@ -114,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Handle dropdown on mobile
         function setupMobileDropdowns() {
             const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            const isMobileView = () => window.matchMedia('(max-width: 768px)').matches;
+            const isMobileView = () =>
+                isTouchDevice || window.matchMedia('(max-width: 768px)').matches;
             
             dropdownToggles.forEach(toggle => {
                 if (toggle.dataset.ppDropdownBound === 'true') return;
@@ -133,11 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const isActive = dropdown.classList.contains('active');
                     
                     // Close other dropdowns
-                    document.querySelectorAll('.dropdown.active, .dropdown-mobile.active').forEach(el => {
-                        if (el !== dropdown) {
-                            el.classList.remove('active');
-                        }
-                    });
+                    closeAllDropdowns();
                     
                     // Toggle current dropdown
                     dropdown.classList.toggle('active', !isActive);
@@ -152,16 +160,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.dataset.ppDropdownDocBound = 'true';
                 document.addEventListener('click', function(e) {
                     if (isMobileView()) {
-                        const dropdowns = document.querySelectorAll('.dropdown.active, .dropdown-mobile.active');
-                        dropdowns.forEach(dropdown => {
-                            if (!dropdown.contains(e.target)) {
-                                dropdown.classList.remove('active');
-                                const toggle = dropdown.querySelector('.dropdown-toggle');
-                                if (toggle) {
-                                    toggle.setAttribute('aria-expanded', 'false');
-                                }
-                            }
-                        });
+                        const clickedInsideDropdown = e.target.closest('.dropdown');
+                        if (!clickedInsideDropdown) {
+                            closeAllDropdowns();
+                        }
                     }
                 });
             }
@@ -180,6 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navOverlay.addEventListener('click', function() {
             if (window.innerWidth <= 768 && isNavOpen) {
                 closeNav();
+                closeAllDropdowns();
             }
         });
 
@@ -199,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && isNavOpen) {
                 closeNav();
+                closeAllDropdowns();
             }
         });
 
@@ -210,6 +214,18 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Re-initialize dropdowns on resize
             setupMobileDropdowns();
+            closeAllDropdowns();
+        });
+
+        // Close dropdowns and nav when a link is clicked
+        navMenu.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+            if (link.classList.contains('dropdown-toggle')) return;
+            closeAllDropdowns();
+            if (window.innerWidth <= 768 && isNavOpen) {
+                closeNav();
+            }
         });
 
         // Initialize mobile dropdowns

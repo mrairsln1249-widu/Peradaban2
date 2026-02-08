@@ -348,6 +348,25 @@ ul {
     z-index: 100;
 }
 
+body.touch-device .dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+body.touch-device .dropdown-toggle {
+    touch-action: manipulation;
+}
+
+body.touch-device .dropdown-toggle i {
+    transition: transform 0.3s ease;
+}
+
+body.touch-device .dropdown.active .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
 
 @media (hover: hover) and (pointer: fine) and (min-width: 769px) {
     .dropdown:hover .dropdown-menu {
@@ -762,6 +781,34 @@ section {
     margin-bottom: 3rem;
 }
 
+.pp-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1rem 0 2.5rem;
+}
+
+.pp-stat-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 20px var(--shadow);
+    border: 1px solid rgba(10, 42, 94, 0.08);
+}
+
+.pp-stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+}
+
+.pp-stat-label {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
 .facility-card {
     border-radius: var(--border-radius-lg);
     overflow: hidden;
@@ -929,6 +976,48 @@ section {
 
 .achievement-description {
     color: var(--dark-gray);
+}
+
+.alumni-list {
+    margin-top: 2.25rem;
+    background: var(--light-gray);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.alumni-list-title {
+    text-align: center;
+    color: var(--navy);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem 1.5rem;
+}
+
+.alumni-item {
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 0.98rem;
+}
+
+.alumni-item span {
+    display: block;
+    color: var(--dark-gray);
+    font-weight: 500;
+    font-size: 0.92rem;
+    margin-top: 0.2rem;
+}
+
+.alumni-note {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
 }
 
 /* CTA Section */
@@ -1225,7 +1314,7 @@ section {
     
     .hero-section {
         height: calc(100vh - var(--header-height, 80px));
-        min-height: 420px;
+        min-height: 380px;
         margin-top: 0;
     }
     
@@ -1278,9 +1367,34 @@ section {
     }
 }
 
+@media (max-width: 768px) {
+    .alumni-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+body.touch-device .nav-menu .dropdown-menu {
+    display: block !important;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+body.touch-device .nav-menu .dropdown.active .dropdown-menu {
+    max-height: 480px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
 @media (max-width: 576px) {
     .hero-section {
-        min-height: 360px;
+        min-height: 320px;
     }
 
     .slide-title {
@@ -2833,6 +2947,21 @@ section {
     margin-top: 2rem;
 }
 
+.pp-map-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.25rem 2rem;
+    text-align: center;
+    color: var(--pp-navy);
+}
+
+.pp-map-card i {
+    font-size: 2.5rem;
+    color: var(--pp-gold);
+}
+
 .pp-map-frame {
     width: 100%;
     height: 400px;
@@ -3358,6 +3487,169 @@ section {
     font-size: 0.9rem;
 }
 
+.pp-alumni-carousel {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.pp-carousel-track {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0.5rem 0.25rem 0.75rem;
+    scrollbar-width: thin;
+}
+
+.pp-carousel-card {
+    flex: 0 0 320px;
+    background: var(--pp-white);
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 5px 20px var(--pp-shadow);
+    scroll-snap-align: start;
+}
+
+.pp-carousel-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--pp-gold);
+    margin-bottom: 1rem;
+}
+
+.pp-carousel-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pp-alumni-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--pp-gold);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border: 2px solid rgba(212, 175, 55, 0.35);
+}
+
+.pp-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: var(--pp-navy);
+    color: var(--pp-white);
+    box-shadow: 0 8px 18px rgba(10, 42, 94, 0.2);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.pp-carousel-btn:hover {
+    transform: translateY(-50%) scale(1.05);
+    background: var(--pp-navy-light);
+}
+
+.pp-carousel-prev {
+    left: -18px;
+}
+
+.pp-carousel-next {
+    right: -18px;
+}
+
+.pp-alumni-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--pp-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px var(--pp-shadow);
+}
+
+.pp-alumni-table th,
+.pp-alumni-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--pp-light-gray);
+    vertical-align: top;
+}
+
+.pp-alumni-table th:nth-child(4),
+.pp-alumni-table td:nth-child(4) {
+    width: 36%;
+}
+
+.pp-alumni-table th:nth-child(5),
+.pp-alumni-table td:nth-child(5) {
+    width: 32%;
+}
+
+.pp-alumni-table th {
+    background: var(--pp-navy);
+    color: var(--pp-white);
+    font-weight: 600;
+}
+
+.pp-alumni-table tr:nth-child(even) {
+    background: rgba(10, 42, 94, 0.04);
+}
+
+.pp-alumni-table tr:hover {
+    background: rgba(212, 175, 55, 0.12);
+}
+
+.pp-alumni-table tr:active,
+.pp-alumni-table tr:focus-within {
+    background: rgba(212, 175, 55, 0.2);
+}
+
+.pp-campus-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--pp-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 18px var(--pp-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pp-campus-logo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(10, 42, 94, 0.18);
+}
+
+.pp-campus-logo img {
+    width: min(100%, 980px);
+    height: auto;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.pp-campus-logo:hover img {
+    transform: scale(1.02);
+}
+
+.pp-campus-caption {
+    text-align: center;
+    margin-top: 0.85rem;
+    color: var(--pp-dark-gray);
+    font-size: 0.95rem;
+}
+
 /* Tentang Page */
 .pp-team-avatar {
     width: 150px;
@@ -3619,6 +3911,34 @@ section {
     .pp-video-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pp-carousel-btn {
+        display: none;
+    }
+
+    .pp-carousel-card {
+        flex-basis: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pp-alumni-table th,
+    .pp-alumni-table td {
+        padding: 0.75rem 0.65rem;
+        font-size: 0.9rem;
+        white-space: normal;
+        word-break: break-word;
+    }
+}
+
+@media (max-width: 576px) {
+    .pp-alumni-table th,
+    .pp-alumni-table td {
+        padding: 0.65rem 0.55rem;
+        font-size: 0.85rem;
     }
 }
 
@@ -3992,7 +4312,7 @@ section {
 
 @media (max-width: 768px) {
     .pp-page-header {
-        padding: 6rem 0 3rem;
+        padding: 5.25rem 0 2.75rem;
     }
     
     .pp-page-title {
@@ -4092,6 +4412,10 @@ section {
 }
 
 @media (max-width: 576px) {
+    .pp-page-header {
+        padding: 4.5rem 0 2.25rem;
+    }
+
     .pp-page-title {
         font-size: 1.8rem;
     }
