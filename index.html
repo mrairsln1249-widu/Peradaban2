@@ -12,6 +12,7 @@
     <link rel="icon" href="assets/Logo Peradaban2.png" type="image/png">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Lewati ke konten</a>
     <!-- Header & Navigation -->
     <header class="header header-transparent">
         <div class="container">
@@ -51,7 +52,6 @@
         <div class="lang-switch">
             <a href="index.html" class="lang-link active">ID</a>
             <a href="index-en.html" class="lang-link">EN</a>
-            <a href="index-ar.html" class="lang-link">AR</a>
         </div>
         <a href="https://s.id/psbpesantrenperadaban26" class="btn-nav">Daftar Sekarang</a>
     </div>
@@ -63,8 +63,10 @@
         </div>
     </header>
 
+    <main id="main-content">
+
     <!-- Hero Section with Carousel -->
-    <section class="hero-section">
+    <section class="hero-section" id="beranda">
         <div class="carousel-container">
 
             <!-- Slide 1: Info PSB -->
@@ -74,7 +76,7 @@
                 <div class="slide-content">
                 <div class="slide-tag">Penerimaan Santri Baru</div>
                     <h1 class="slide-title">PSB <span>Tahun Ajaran 2026/2027</span> Telah Dibuka</h1>
-                    <p class="slide-description">Pendidikan Islam terpadu yang menyeimbangkan adab, tahfiz Al-Qur'an, dan prestasi akademik. Kuota terbatas — amankan kesempatan terbaik bagi putra-putri Anda melalui pendaftaran awal.</p>
+                    <p class="slide-description">Pendidikan Islam terpadu yang menyeimbangkan adab, tahfiz Al-Qur'an, dan prestasi akademik. Kuota terbatas - amankan kesempatan terbaik bagi putra-putri Anda melalui pendaftaran awal.</p>
                     <div class="slide-buttons">
                         <a href="https://s.id/psbpesantrenperadaban26" class="btn btn-primary">Daftar Online</a>
                         <a href="pages/psb.html" class="btn btn-secondary">Info Lebih Lanjut</a>
@@ -162,8 +164,25 @@
         </div>
     </section>
 
+    <section class="achievement-section" id="akses-cepat">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Akses <span>Cepat</span></h2>
+                <p class="section-subtitle">Langsung ke informasi yang paling sering dicari orang tua dan calon santri</p>
+            </div>
+            <div class="text-center quick-links">
+                <a href="https://s.id/psbpesantrenperadaban26" class="btn btn-primary">Daftar Sekarang</a>
+                <a href="#program" class="btn btn-outline">Lihat Program</a>
+                <a href="#fasilitas" class="btn btn-outline">Fasilitas</a>
+                <a href="#pengajar" class="btn btn-outline">Pengajar</a>
+                <a href="#alumni" class="btn btn-outline">Jejak Alumni</a>
+                <a href="pages/faq.html" class="btn btn-outline">FAQ</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Keunggulan Inti Section -->
-    <section class="achievement-section">
+    <section class="achievement-section" id="keunggulan">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Keunggulan <span>Kami</span></h2>
@@ -222,8 +241,44 @@
         </div>
     </section>
 
+    <section class="achievement-section" id="alur-pendaftaran">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Alur <span>Pendaftaran</span></h2>
+                <p class="section-subtitle">Tiga langkah sederhana untuk menjadi bagian dari Pesantren Peradaban</p>
+            </div>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3 class="achievement-title">Isi Formulir</h3>
+                    <p class="achievement-description">Lengkapi pendaftaran online dan unggah dokumen yang dibutuhkan.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="achievement-title">Wawancara & Tes</h3>
+                    <p class="achievement-description">Jadwalkan sesi seleksi agar kami mengenal calon santri lebih dekat.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="achievement-title">Pengumuman</h3>
+                    <p class="achievement-description">Hasil seleksi diinformasikan melalui WA dan email terdaftar.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="pages/psb.html" class="btn btn-outline">Detail PSB</a>
+                <a href="https://s.id/psbpesantrenperadaban26" class="btn btn-primary">Daftar Online</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Program Unggulan Section -->
-    <section class="program-section">
+    <section class="program-section" id="program">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Program <span>Unggulan</span></h2>
@@ -262,7 +317,7 @@
     </section>
 
     <!-- Fasilitas Unggulan Section -->
-    <section class="facility-section">
+    <section class="facility-section" id="fasilitas">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Fasilitas <span>Unggulan</span></h2>
@@ -283,7 +338,7 @@
                     <div class="pp-stat-label">Lanjut Kerja</div>
                 </div>
                 <div class="pp-stat-card">
-                    <div class="pp-stat-number">3–15 Juz</div>
+                    <div class="pp-stat-number">3-15 Juz</div>
                     <div class="pp-stat-label">Target Hafalan Lulusan</div>
                 </div>
                 <div class="pp-stat-card">
@@ -295,7 +350,7 @@
             <div class="facility-grid">
                 <div class="facility-card">
                     <div class="facility-image">
-                        <img src="assets/images/fasilitas-1.jpg" alt="Perpustakaan Modern">
+                        <img src="assets/gallery/Perpustakaan Modern.jpeg" alt="Perpustakaan Modern">
                     </div>
                     <div class="facility-content">
                         <h3 class="facility-title">Perpustakaan Modern</h3>
@@ -305,7 +360,7 @@
                 
                 <div class="facility-card">
                     <div class="facility-image">
-                        <img src="assets/images/fasilitas-2.jpg" alt="Laboratorium Komputer">
+                        <img src="assets/gallery/Laboratorium Komputer.jpeg" alt="Laboratorium Komputer">
                     </div>
                     <div class="facility-content">
                         <h3 class="facility-title">Laboratorium Komputer</h3>
@@ -315,7 +370,7 @@
                 
                 <div class="facility-card">
                     <div class="facility-image">
-                        <img src="assets/images/fasilitas-3.jpg" alt="Asrama Nyaman">
+                        <img src="assets/gallery/Asrama Nyaman.jpeg" alt="Asrama Nyaman">
                     </div>
                     <div class="facility-content">
                         <h3 class="facility-title">Asrama Nyaman</h3>
@@ -330,50 +385,92 @@
         </div>
     </section>
 
-    <!-- Pengajar Berpengalaman Section -->
-    <section class="teacher-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Pengajar <span>Berpengalaman</span></h2>
-                <p class="section-subtitle">Dibimbing oleh guru dan ustadz yang kompeten serta teladan dalam pembinaan adab</p>
-            </div>
+    <!-- Tim Pengelola -->
+    <section class="pp-page-content pp-section-light">
+        <div class="pp-container">
+            <h2 class="pp-about-title text-center">Tim Pengelola Pesantren</h2>
+            <p class="section-subtitle text-center pp-mb-3">Para pengasuh dan pengelola yang membimbing perjalanan Pesantren Peradaban</p>
             
-            <div class="teacher-grid">
-                <div class="teacher-card">
-                    <div class="teacher-image">
-                        <img src="assets/images/pengajar-1.jpg" alt="Ustadz Ahmad, M.Pd">
+            <div class="pp-grid pp-grid-3cols">
+                <div class="pp-card text-center">
+                    <div class="pp-team-avatar">
+                        <img src="assets/gallery/Prof Aris Munandar.png" alt="Prof Aris Pembina Yayasan">
                     </div>
-                    <div class="teacher-info">
-                        <h3 class="teacher-name">Ustadz Ruhaedin, S.Pd.I</h3>
-                        <p class="teacher-subject">Pengajar Tahfiz & Al-Qur'an</p>
-                        <p class="teacher-bio">Lulusan Universitas Al-Azhar dengan pengalaman 10 tahun mengajar tahfiz.</p>
+                    <h3 class="pp-card-title">Prof. Dr. Aris Munandar, M.Si</h3>
+                    <p class="pp-card-content pp-role-text">Pembina Yayasan</p>
+                    <div class="pp-card-content">
+                        <p>Guru Besar bidang Sosiologi di Universitas Nasional (UNAS), memperkuat arah akademik dan tata kelola pendidikan pesantren berbasis riset untuk kemajuan pendidikan pesantren di daerah. </p>
                     </div>
                 </div>
                 
-                <div class="teacher-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Pengajar Berkualitas</div>
+                <div class="pp-card text-center">
+                    <div class="pp-team-avatar">
+                        <img src="assets/gallery/Ust Nugraha W Saputra.png" alt="Ust Nugraha Ketua Yayasan">
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Bergelar S1/S2</div>
+                    <h3 class="pp-card-title">Ust Nugraha W. Saputra, S.H</h3>
+                    <p class="pp-card-content pp-role-text">Ketua Yayasan</p>
+                    <div class="pp-card-content">
+                        <p>Ahli Hukum dan sekaligus pengusaha yang berpengalaman dalam pengelolaan dan pengembangan organisasi termasuk organisasi pendidikan.</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Tahun Pengalaman</div>
+                </div>
+                
+                <div class="pp-card text-center">
+                    <div class="pp-team-avatar">
+                        <img src="assets/gallery/Prof Agus Priyono.png" alt="Prof Agus Mudir">
+                    </div>
+                    <h3 class="pp-card-title">Prof. Ir. Agus Priyono, Ph.D</h3>
+                    <p class="pp-card-content pp-role-text">Mudir Pesantren</p>
+                    <div class="pp-card-content">
+                        <p>Pernah menjabat sebagai Rektor Institut Sains dan Teknologi Nasional (ISTN), ahli robotika, dan berpengalaman dalam pengelolaan lembaga pendidikan serta membangun jejaring akademik lintas kampus.</p>
+                    </div>
+                </div>
+
+                <div class="pp-card text-center">
+                    <div class="pp-team-avatar">
+                        <img src="assets/gallery/Ustadz Ruhaedin S.Pd.I.png" alt="Ustadz Ruhaedin, S.Pd.I" class="pp-team-photo-zoom">
+                    </div>
+                    <h3 class="pp-card-title">Ustadz Ruhaedin, S.Pd.I</h3>
+                    <p class="pp-card-content pp-role-text">Kepala Kepesantrenan</p>
+                    <div class="pp-card-content">
+                        <p>Pengajar Kitab Kuning dan Al-Qur'an dengan pengalaman lebih dari 20 tahun dalam pengajaran dan pembinaan santri.</p>
+                    </div>
+                </div>
+
+                <div class="pp-card text-center">
+                    <div class="pp-team-avatar">
+                        <img src="assets/gallery/Usth Shofia Mujahidah, M.Si.png" alt="Ustadzah Shofia Mujahida, M.Si">
+                    </div>
+                    <h3 class="pp-card-title">Ustadzah Shofia Mujahida, M.Si</h3>
+                    <p class="pp-card-content pp-role-text">Kepala Sekolah</p>
+                    <div class="pp-card-content">
+                        <p>Master dari IPB University yang ahli dan berpengalaman dalam manajemen pendidikan dan penguatan budaya akademik di lingkungan sekolah dan pesantren.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="teacher-stats pp-team-stats">
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Pengajar Berkualitas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Bergelar S1/S2</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Tahun Pengalaman</div>
+                </div>
+            </div>
             
-            <div class="text-center">
-                <a href="pages/pengajar.html" class="btn btn-outline">Lihat Profil Pengajar</a>
+            <div class="text-center pp-mt-3">
+                <a href="pages/pengajar.html" class="btn btn-primary">Lihat Tim Pengajar Lengkap</a>
             </div>
         </div>
     </section>
 
     <!-- Prestasi Santri Section -->
-    <section class="achievement-section">
+    <section class="achievement-section" id="prestasi">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Prestasi <span>Santri</span></h2>
@@ -413,7 +510,7 @@
     </section>
 
     <!-- Jejak Alumni Section -->
-    <section class="achievement-section">
+    <section class="achievement-section" id="alumni">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Jejak <span>Alumni</span></h2>
@@ -425,8 +522,15 @@
                     <div class="achievement-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="achievement-title">37 Alumni S1 (2024–2025)</h3>
+                    <h3 class="achievement-title">40+ Alumni S1 (2024-2025)</h3>
                     <p class="achievement-description">Data lulusan yang melanjutkan studi sebagai bukti pembinaan akademik dan karakter yang berkelanjutan.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="achievement-title">20+ Alumni Bekerja (2024-2025)</h3>
+                    <p class="achievement-description">Alumni terserap di berbagai sektor kerja sebagai bukti kesiapan karier dan pembinaan karakter yang konsisten.</p>
                 </div>
                 
                 <div class="achievement-card">
@@ -446,31 +550,14 @@
                 </div>
             </div>
 
-            <div class="alumni-list">
-                <h3 class="alumni-list-title">Sebagian Alumni 2024–2025</h3>
-                <div class="alumni-grid">
-                    <div class="alumni-item"><strong>Azzahra Naurah Ayu</strong><span>Universitas Siliwangi (2025)</span></div>
-                    <div class="alumni-item"><strong>Neiza Fitria Ramadhanti</strong><span>Universitas Pendidikan Indonesia (2025)</span></div>
-                    <div class="alumni-item"><strong>Najwa Syafira</strong><span>Universitas Siliwangi (2025)</span></div>
-                    <div class="alumni-item"><strong>Fathir Fatahillah</strong><span>Politeknik Perikanan dan Kelautan Karawang (2025)</span></div>
-                    <div class="alumni-item"><strong>Refa Nursalamah</strong><span>Universitas Pendidikan Indonesia (2025)</span></div>
-                    <div class="alumni-item"><strong>Siti Zahra Yundiyavi</strong><span>Universitas Sriwijaya (2025)</span></div>
-                    <div class="alumni-item"><strong>Imanudin Al Hikam</strong><span>Universitas Pamulang (2025)</span></div>
-                    <div class="alumni-item"><strong>Rif'at Fadhli Firdaus</strong><span>Politeknik Perikanan dan Kelautan Pangandaran (2025)</span></div>
-                    <div class="alumni-item"><strong>Fatimah Nur Afifah</strong><span>Universitas Terbuka (2025)</span></div>
-                    <div class="alumni-item"><strong>Muhammad Ridho Ramadhan</strong><span>Universitas Pendidikan Indonesia (2025)</span></div>
-                </div>
-                <p class="alumni-note">Data lengkap dapat dilihat pada halaman Alumni.</p>
-            </div>
-
-            <div class="text-center">
+            <div class="text-center alumni-cta">
                 <a href="pages/alumni.html" class="btn btn-outline">Lihat Jejak Alumni</a>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cta-section" id="daftar">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Bergabunglah dengan <span>Pesantren Peradaban</span></h2>
@@ -482,6 +569,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
