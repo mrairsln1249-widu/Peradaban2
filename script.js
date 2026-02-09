@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     const headerEl = document.querySelector('.header');
+    const anchorNav = document.querySelector('.anchor-nav-section');
     const heroSection = document.querySelector('.hero-section');
 
     function ensureWhatsappFloat() {
@@ -49,6 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.style.setProperty('--header-height', headerH + 'px');
     }
 
+    function updateAnchorNavHeight() {
+        const height = anchorNav ? anchorNav.offsetHeight : 0;
+        document.documentElement.style.setProperty('--anchor-nav-height', height + 'px');
+    }
+
     function updateHeaderTransparency() {
         if (!headerEl) return;
         if (!heroSection) {
@@ -62,6 +68,25 @@ document.addEventListener('DOMContentLoaded', function() {
             headerEl.classList.remove('header-transparent');
         }
         updateHeaderOffsets();
+        updateAnchorNavHeight();
+    }
+
+    // Auto-hide header on scroll down, show on scroll up
+    let lastScrollY = window.scrollY;
+    function updateHeaderVisibility() {
+        if (!headerEl) return;
+        const currentScroll = window.scrollY;
+        const scrollingDown = currentScroll > lastScrollY;
+
+        if (currentScroll > 120) {
+            headerEl.classList.toggle('header-hidden', scrollingDown);
+            headerEl.classList.toggle('header-visible', !scrollingDown);
+        } else {
+            headerEl.classList.remove('header-hidden');
+            headerEl.classList.add('header-visible');
+        }
+
+        lastScrollY = currentScroll;
     }
 
     // Handle mobile navigation
@@ -232,13 +257,44 @@ document.addEventListener('DOMContentLoaded', function() {
         setupMobileDropdowns();
     }
 
+    function setupAnchorNavLinks() {
+        const anchorNavLinks = document.querySelectorAll('.anchor-nav a[href^="#"]');
+        if (!anchorNavLinks.length) return;
+
+        anchorNavLinks.forEach(link => {
+            if (link.dataset.ppAnchorBound === 'true') return;
+            link.dataset.ppAnchorBound = 'true';
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
+                const target = document.querySelector(href);
+                if (!target) return;
+
+                e.preventDefault();
+                const headerH = headerEl ? headerEl.offsetHeight : 0;
+                const anchorH = anchorNav ? anchorNav.offsetHeight : 0;
+                const isHeaderTransparent = headerEl && headerEl.classList.contains('header-transparent');
+                const offset = (isHeaderTransparent ? 0 : headerH) + anchorH + 16;
+                const targetTop = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+                window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+                history.replaceState(null, '', href);
+            });
+        });
+    }
+
     // Initialize navigation
     updateHeaderOffsets();
     window.addEventListener('resize', debounce(updateHeaderOffsets, 150));
     setupMobileNavigation();
+    setupAnchorNavLinks();
     updateHeaderTransparency();
+    updateHeaderVisibility();
+    updateAnchorNavHeight();
     setTimeout(updateHeaderTransparency, 0);
     window.addEventListener('scroll', debounce(updateHeaderTransparency, 20), { passive: true });
+    window.addEventListener('scroll', debounce(updateHeaderVisibility, 20), { passive: true });
+    window.addEventListener('resize', debounce(updateAnchorNavHeight, 100), { passive: true });
     ensureWhatsappFloat();
     setActiveNavLink();
 
@@ -584,7 +640,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Calculate header height for offset
                 const headerHeight = headerEl ? headerEl.offsetHeight : 0;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                const anchorHeight = anchorNav ? anchorNav.offsetHeight : 0;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - anchorHeight;
                 
                 // Smooth scroll with reduced motion support
                 if (prefersReducedMotion()) {
@@ -1228,6 +1285,10 @@ function pp_initPageComponents() {
     // Initialize gallery reveal animations
     if (typeof pp_initGalleryReveal === 'function') {
         pp_initGalleryReveal();
+    }
+
+    if (typeof pp_initScrollReveal === 'function') {
+        pp_initScrollReveal();
     }
 
     if (typeof pp_initGalleryFilters === 'function') {
@@ -2059,6 +2120,29 @@ function pp_initGalleryReveal() {
     });
 }
 
+function pp_initScrollReveal() {
+    const elements = document.querySelectorAll('.pp-reveal');
+    if (elements.length === 0) return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReduced || typeof IntersectionObserver === 'undefined') {
+        elements.forEach(el => el.classList.add('pp-reveal-visible'));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('pp-reveal-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+
+    elements.forEach(el => observer.observe(el));
+}
+
 function pp_initGalleryFilters() {
     const filterBar = document.querySelector('.pp-gallery-filters');
     const galleries = Array.from(document.querySelectorAll('.pp-activity-gallery[data-category]'));
@@ -2184,19 +2268,50 @@ function pp_initAccordion() {
         header.dataset.ppAccordionBound = 'true';
         header.setAttribute('tabindex', '0');
         header.setAttribute('role', 'button');
-        header.setAttribute('aria-expanded', 'false');
+        const shouldOpen = header.dataset.ppDefaultOpen === 'true';
+        header.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
         
         const content = header.nextElementSibling;
         if (content) {
-            content.setAttribute('aria-hidden', 'true');
+            content.setAttribute('aria-hidden', shouldOpen ? 'false' : 'true');
+            if (shouldOpen) {
+                const accordionItem = header.parentElement;
+                if (accordionItem) {
+                    accordionItem.classList.add('active');
+                }
+                requestAnimationFrame(() => {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                });
+            }
         }
         
         header.addEventListener('click', function() {
             const accordionItem = this.parentElement;
             const accordionContent = this.nextElementSibling;
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const accordionRoot = this.closest('.pp-accordion');
+
+            if (accordionRoot) {
+                const allHeaders = accordionRoot.querySelectorAll('.pp-accordion-header');
+                const allItems = accordionRoot.querySelectorAll('.pp-accordion-item');
+
+                allHeaders.forEach(otherHeader => {
+                    if (otherHeader === this) return;
+                    otherHeader.setAttribute('aria-expanded', 'false');
+                    const otherContent = otherHeader.nextElementSibling;
+                    if (otherContent) {
+                        otherContent.setAttribute('aria-hidden', 'true');
+                        otherContent.style.maxHeight = '0';
+                    }
+                });
+
+                allItems.forEach(otherItem => {
+                    if (otherItem === accordionItem) return;
+                    otherItem.classList.remove('active');
+                });
+            }
             
-            // Toggle active class
+            // Toggle active class for the clicked item
             this.setAttribute('aria-expanded', !isExpanded);
             if (accordionItem) {
                 accordionItem.classList.toggle('active', !isExpanded);
