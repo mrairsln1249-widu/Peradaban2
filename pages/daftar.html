@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -142,18 +142,7 @@
                                 </div>
                             </div>
                             
-                            <div class="pp-form-group">
-                                <label for="agama" class="pp-form-label required">Agama</label>
-                                <select id="agama" name="agama" class="pp-form-control pp-form-select" required>
-                                    <option value="">Pilih Agama</option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Kristen">Kristen</option>
-                                    <option value="Katolik">Katolik</option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Buddha">Buddha</option>
-                                    <option value="Konghucu">Konghucu</option>
-                                </select>
-                            </div>
+                            <input type="hidden" id="agama" name="agama" value="Islam">
                         </div>
                         
                         <div class="pp-form-group">
@@ -316,8 +305,7 @@
                                 <label for="tahun_ajaran" class="pp-form-label required">Tahun Ajaran</label>
                                 <select id="tahun_ajaran" name="tahun_ajaran" class="pp-form-control pp-form-select" required>
                                     <option value="">Pilih Tahun Ajaran</option>
-                                    <option value="2024/2025">2024/2025</option>
-                                    <option value="2025/2026">2025/2026</option>
+                                    <option value="2026/2027">2026/2027</option>
                                 </select>
                             </div>
                         </div>
@@ -449,10 +437,10 @@
                     <h3 class="pp-info-title">Informasi Penting</h3>
                     
                     <ul class="pp-info-list">
-                        <li><i class="fas fa-calendar-check"></i> <strong>Pendaftaran:</strong> 1 Januari - 31 Mei 2024</li>
-                        <li><i class="fas fa-calendar-alt"></i> <strong>Test Seleksi:</strong> 15-30 Juni 2024</li>
-                        <li><i class="fas fa-bullhorn"></i> <strong>Pengumuman:</strong> 10 Juli 2024</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Daftar Ulang:</strong> 15-25 Juli 2024</li>
+                        <li><i class="fas fa-calendar-check"></i> <strong>Pendaftaran:</strong> 1 Januari - 20 Juni 2026</li>
+                        <li><i class="fas fa-calendar-alt"></i> <strong>Test Seleksi:</strong> 22-27 Juni 2026</li>
+                        <li><i class="fas fa-bullhorn"></i> <strong>Pengumuman:</strong> 1 Juli 2026</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Daftar Ulang:</strong> 2-10 Juli 2026</li>
                     </ul>
                     
                     <h4 style="color: var(--pp-navy); margin-bottom: 1rem;">Proses Seleksi</h4>
@@ -477,10 +465,10 @@
     </section>
 
                     <!-- Footer -->
-    <footer class="footer footer-premium">
+        <footer class="footer footer-premium">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
+                <div class="footer-col footer-brand-col">
                     <div class="footer-logo">
                         <img src="../assets/Logo Peradaban2.png" alt="Logo Pesantren Peradaban">
                         <div class="footer-logo-text">
@@ -488,47 +476,75 @@
                             <p>Membangun Peradaban untuk Sejatinya Manusia</p>
                         </div>
                     </div>
-                    <p class="footer-about">Pesantren Peradaban adalah lembaga pendidikan Islam terpadu yang membina karakter, tahfiz, dan penguatan akademik.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/pesantrenperadaban.id" target="_blank" rel="noopener" aria-label="Facebook Pesantren Peradaban"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/pesantrenperadaban.id/" target="_blank" rel="noopener" aria-label="Instagram Pesantren Peradaban"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@pesantrenperadaban.id" target="_blank" rel="noopener" aria-label="TikTok Pesantren Peradaban"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.youtube.com/@smapesantrenperadaban" target="_blank" rel="noopener" aria-label="YouTube Pesantren Peradaban"><i class="fab fa-youtube"></i></a>
+                    <p class="footer-about">Pesantren Peradaban adalah lembaga pendidikan Islam terpadu yang membina karakter, tahfiz, dan penguatan akademik untuk melahirkan generasi beradab.</p>
+                </div>
+
+                <div class="footer-col footer-contact-col">
+                    <h3 class="footer-title">Hubungi Kami</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <span class="footer-contact-icon"><i class="fas fa-phone-alt"></i></span>
+                            <div class="footer-contact-detail">
+                                <span class="footer-contact-label">Telepon/WhatsApp</span>
+                                <a href="https://wa.me/6285210738001" target="_blank" rel="noopener">+62 852-1073-8001</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="footer-contact-icon"><i class="fas fa-envelope"></i></span>
+                            <div class="footer-contact-detail">
+                                <span class="footer-contact-label">Email</span>
+                                <a href="mailto:pesantrenperadaban01@gmail.com">pesantrenperadaban01@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="footer-contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <div class="footer-contact-detail">
+                                <span class="footer-contact-label">Alamat</span>
+                                <span>Jl. Cintabodas, Culamega, Tasikmalaya</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="footer-contact-icon"><i class="fas fa-clock"></i></span>
+                            <div class="footer-contact-detail">
+                                <span class="footer-contact-label">Jam Operasional</span>
+                                <span>Senin - Jumat: 08:00 - 16:00 WIB</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-links-col">
+                    <h3 class="footer-title">Tautan Cepat</h3>
+                    <ul class="footer-links footer-links-quick">
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                        <li><a href="smp-pesantren.html"><i class="fas fa-chevron-right"></i> Program Belajar</a></li>
+                        <li><a href="https://s.id/psbpesantrenperadaban26"><i class="fas fa-chevron-right"></i> Pendaftaran Online</a></li>
+                        <li><a href="fasilitas.html"><i class="fas fa-chevron-right"></i> Fasilitas</a></li>
+                        <li><a href="tentang.html"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="kontak.html"><i class="fas fa-chevron-right"></i> Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-social-col">
+                    <h3 class="footer-title">Ikuti Kami</h3>
+                    <div class="social-links footer-social-links">
                         <a href="https://wa.me/6285210738001" target="_blank" rel="noopener" aria-label="WhatsApp Pesantren Peradaban"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/pesantrenperadaban.id/" target="_blank" rel="noopener" aria-label="Instagram Pesantren Peradaban"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/pesantrenperadaban.id" target="_blank" rel="noopener" aria-label="Facebook Pesantren Peradaban"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@smapesantrenperadaban" target="_blank" rel="noopener" aria-label="YouTube Pesantren Peradaban"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@pesantrenperadaban.id" target="_blank" rel="noopener" aria-label="TikTok Pesantren Peradaban"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Berlangganan Newsletter</h4>
+                        <div class="footer-newsletter-form">
+                            <input type="email" placeholder="Email Anda" aria-label="Email newsletter">
+                            <button type="button"><i class="fas fa-paper-plane"></i> Daftar</button>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="footer-col">
-                    <h3 class="footer-title">Program</h3>
-                    <ul class="footer-links">
-                        <li><a href="smp-pesantren.html">SMP Pesantren</a></li>
-                        <li><a href="sma-fullday.html">SMA Full Day</a></li>
-                        <li><a href="sma-boarding.html">SMA Boarding</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col footer-col-wide">
-                    <h3 class="footer-title">Informasi</h3>
-                    <ul class="footer-links">
-                        <li><a href="tentang.html">Tentang Kami</a></li>
-                        <li><a href="psb.html">PSB</a></li>
-                        <li><a href="fasilitas.html">Fasilitas</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3 class="footer-title">Kontak Kami</h3>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Jl. Cintabodas, Kec. Culamega, Kabupaten Tasikmalaya, Jawa Barat 46188</li>
-                        <li><i class="fab fa-whatsapp"></i> 085210738001</li>
-                        <li><i class="fas fa-envelope"></i> pesantrenperadaban01@gmail.com</li>
-                        <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 16:00</li>
-                    </ul>
-                </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Pesantren Peradaban. Semua hak dilindungi.</p>
             </div>
@@ -548,6 +564,8 @@
             const whatsappSuccess = document.getElementById('pp-whatsapp-success');
             const whatsappLink = document.getElementById('pp-whatsapp-link');
             const backToFormBtn = document.getElementById('pp-back-to-form');
+            const googleSheetWebAppUrl = 'https://script.google.com/macros/s/AKfycbylZAh7TNdDGt0c_aA-AgkqrX6lTysMuS7j5BQCnQcoHUvirUPTZU5xPirvHPSiJjEH/exec'; // URL Web App Google Apps Script
+            const submitButtonDefaultHtml = btnSubmit.innerHTML;
             
             let currentStep = 0;
             const totalSteps = steps.length;
@@ -582,11 +600,19 @@
             });
             
             // Form submission
-            form.addEventListener('submit', function(e) {
+            form.addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
                 if (validateCurrentStep() && validateFinalStep()) {
-                    sendToWhatsApp();
+                    btnSubmit.disabled = true;
+                    btnSubmit.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+
+                    try {
+                        await sendToWhatsApp();
+                    } finally {
+                        btnSubmit.disabled = false;
+                        btnSubmit.innerHTML = submitButtonDefaultHtml;
+                    }
                 }
             });
             
@@ -765,12 +791,15 @@
                 
                 document.getElementById('pp-summary-content').innerHTML = summaryHTML;
             }
-            
-            // Send data to WhatsApp
-            function sendToWhatsApp() {
+
+            // Send data to WhatsApp (and optionally to Google Sheet)
+            async function sendToWhatsApp() {
                 // Get form data
                 const formData = new FormData(form);
                 const data = Object.fromEntries(formData.entries());
+                const submittedAt = new Date();
+                const registrationId = `PP-${Date.now().toString().slice(-8)}`;
+                const sheetPayload = buildSheetPayload(data, submittedAt, registrationId);
                 
                 // Format date
                 const tanggalLahir = data.tanggal_lahir ? new Date(data.tanggal_lahir).toLocaleDateString('id-ID') : '';
@@ -812,45 +841,120 @@
                 message += `Catatan: ${data.catatan_tambahan || '-'}%0A%0A`;
                 
                 message += `*BERKAS YANG DISIAPKAN*%0A`;
-                message += `☑ Foto 3x4: ${data.berkas_foto === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
-                message += `☑ Rapor: ${data.berkas_rapor === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
-                message += `☑ Akta Kelahiran: ${data.berkas_akta === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
-                message += `☑ Kartu Keluarga: ${data.berkas_kk === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
-                message += `☑ Surat Sehat: ${data.berkas_surat_sehat === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
-                message += `☑ Surat Nilai: ${data.berkas_surat_nilai === 'Ya' ? 'Ya' : 'Tidak'}%0A%0A`;
+                message += `- Foto 3x4: ${data.berkas_foto === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `- Rapor: ${data.berkas_rapor === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `- Akta Kelahiran: ${data.berkas_akta === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `- Kartu Keluarga: ${data.berkas_kk === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `- Surat Sehat: ${data.berkas_surat_sehat === 'Ya' ? 'Ya' : 'Tidak'}%0A`;
+                message += `- Surat Nilai: ${data.berkas_surat_nilai === 'Ya' ? 'Ya' : 'Tidak'}%0A%0A`;
                 
                 message += `*DATA PENDAFTARAN*%0A`;
-                message += `Tanggal: ${new Date().toLocaleDateString('id-ID')}%0A`;
-                message += `Waktu: ${new Date().toLocaleTimeString('id-ID')}%0A`;
-                message += `ID Pendaftaran: PP-${Date.now().toString().slice(-8)}`;
+                message += `Tanggal: ${submittedAt.toLocaleDateString('id-ID')}%0A`;
+                message += `Waktu: ${submittedAt.toLocaleTimeString('id-ID')}%0A`;
+                message += `ID Pendaftaran: ${registrationId}`;
                 
                 // WhatsApp phone number (change this to your number)
                 const phoneNumber = '628567892884';
+                
+                // Send data to Google Sheet first (if URL is configured)
+                const sheetStatus = await sendToGoogleSheet(sheetPayload);
                 
                 // Create WhatsApp link
                 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
                 
                 // Update WhatsApp link
                 whatsappLink.href = whatsappUrl;
-                
-                // Show success message
-                whatsappSuccess.classList.add('show');
-                
-                // Scroll to success message
-                whatsappSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-                // Reset form after 5 seconds
-                setTimeout(() => {
-                    form.reset();
-                    currentStep = 0;
-                    updateStepDisplay();
-                }, 5000);
-                
-                // Log for debugging
-                console.log('WhatsApp URL:', whatsappUrl);
-                console.log('Form Data:', data);
+
+                if (sheetStatus === 'success') {
+                    alert('Pendaftaran berhasil.');
+                    window.location.href = '../index.html';
+                    return;
+                }
+
+                alert('Pendaftaran gagal. Silakan coba lagi.');
+                window.location.href = 'https://s.id/psbpesantrenperadaban26';
             }
-            
+
+            function buildSheetPayload(data, submittedAt, registrationId) {
+                return {
+                    id_pendaftaran: registrationId,
+                    tanggal_submit: submittedAt.toLocaleDateString('id-ID'),
+                    waktu_submit: submittedAt.toLocaleTimeString('id-ID'),
+                    nama_santri: data.nama_santri || '',
+                    nama_panggilan: data.nama_panggilan || '',
+                    tempat_lahir: data.tempat_lahir || '',
+                    tanggal_lahir: data.tanggal_lahir || '',
+                    jenis_kelamin: data.jenis_kelamin || '',
+                    agama: data.agama || '',
+                    alamat_santri: data.alamat_santri || '',
+                    no_hp_santri: data.no_hp_santri || '',
+                    email_santri: data.email_santri || '',
+                    sekolah_asal: data.sekolah_asal || '',
+                    kelas_dituju: data.kelas_dituju || '',
+                    hobi_bakat: data.hobi_bakat || '',
+                    status_ortu: data.status_ortu || '',
+                    nama_ayah: data.nama_ayah || '',
+                    pekerjaan_ayah: data.pekerjaan_ayah || '',
+                    pendidikan_ayah: data.pendidikan_ayah || '',
+                    no_hp_ayah: data.no_hp_ayah || '',
+                    nama_ibu: data.nama_ibu || '',
+                    pekerjaan_ibu: data.pekerjaan_ibu || '',
+                    pendidikan_ibu: data.pendidikan_ibu || '',
+                    no_hp_ibu: data.no_hp_ibu || '',
+                    email_ortu: data.email_ortu || '',
+                    alamat_ortu: data.alamat_ortu || '',
+                    hubungan_dengan_santri: data.hubungan_dengan_santri || '',
+                    program_dipilih: data.program_dipilih || '',
+                    tahun_ajaran: data.tahun_ajaran || '',
+                    cara_kirim_berkas: data.cara_kirim_berkas || '',
+                    tahu_dari: data.tahu_dari || '',
+                    catatan_tambahan: data.catatan_tambahan || '',
+                    berkas_foto: data.berkas_foto === 'Ya' ? 'Ya' : 'Tidak',
+                    berkas_rapor: data.berkas_rapor === 'Ya' ? 'Ya' : 'Tidak',
+                    berkas_akta: data.berkas_akta === 'Ya' ? 'Ya' : 'Tidak',
+                    berkas_kk: data.berkas_kk === 'Ya' ? 'Ya' : 'Tidak',
+                    berkas_surat_sehat: data.berkas_surat_sehat === 'Ya' ? 'Ya' : 'Tidak',
+                    berkas_surat_nilai: data.berkas_surat_nilai === 'Ya' ? 'Ya' : 'Tidak',
+                    confirm_data: data.confirm_data ? 'Ya' : 'Tidak',
+                    agree_terms: data.agree_terms ? 'Ya' : 'Tidak',
+                    source_page: window.location.pathname
+                };
+            }
+
+            async function sendToGoogleSheet(payload) {
+                if (!googleSheetWebAppUrl) {
+                    return 'failed';
+                }
+
+                try {
+                    const formPayload = new FormData();
+                    Object.entries(payload).forEach(([key, value]) => {
+                        formPayload.append(key, value ?? '');
+                    });
+
+                    await fetch(googleSheetWebAppUrl, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        cache: 'no-store',
+                        body: formPayload
+                    });
+
+                    return 'success';
+                } catch (error) {
+                    console.error('Google Sheet sync error:', error);
+                    try {
+                        if (typeof navigator !== 'undefined' && typeof navigator.sendBeacon === 'function') {
+                            const beaconPayload = new URLSearchParams(payload);
+                            const sent = navigator.sendBeacon(googleSheetWebAppUrl, beaconPayload);
+                            return sent ? 'success' : 'failed';
+                        }
+                    } catch (beaconError) {
+                        console.error('Google Sheet beacon fallback error:', beaconError);
+                    }
+                    return 'failed';
+                }
+            }
+
             // Scroll to top of form
             function scrollToTop() {
                 window.scrollTo({
@@ -903,6 +1007,10 @@
     </script>
 </body>
 </html>
+
+
+
+
 
 
 
