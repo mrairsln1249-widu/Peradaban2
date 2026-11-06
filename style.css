@@ -4521,20 +4521,6 @@ body.touch-device .nav-menu .dropdown.active .dropdown-menu {
     background: rgba(212, 175, 55, 0.2);
 }
 
-.pp-alumni-pt {
-    display: inline-block;
-    margin-left: 0.4rem;
-    padding: 0.1rem 0.45rem;
-    border-radius: 999px;
-    background: rgba(212, 175, 55, 0.18);
-    color: var(--pp-navy);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    white-space: nowrap;
-    vertical-align: middle;
-}
-
 .pp-campus-logo {
     display: flex;
     justify-content: center;
