@@ -468,6 +468,66 @@ body.touch-device .dropdown.active .dropdown-toggle i {
     left: 120%;
 }
 
+/* Tombol sekunder navbar (mis. Login LMS): outline agar hierarki CTA utama
+   (Daftar Sekarang / PSB) tetap paling menonjol. */
+.btn-nav-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background-color: transparent;
+    color: var(--navy);
+    border: 1px solid rgba(10, 42, 94, 0.35);
+    box-shadow: none;
+    padding: 0.62rem 1.05rem;
+    font-size: 0.92rem;
+    margin-right: 0.25rem;
+}
+
+.btn-nav-outline:hover {
+    background-color: rgba(212, 175, 55, 0.14);
+    border-color: var(--gold);
+    color: var(--navy);
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+.btn-nav-outline::after {
+    display: none;
+}
+
+.header.header-transparent .btn-nav-outline {
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.55);
+    box-shadow: none;
+}
+
+.header.header-transparent .btn-nav-outline:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+}
+
+/* Layar desktop sempit: teks disembunyikan, tombol jadi ikon saja agar
+   navigasi tidak berdesakan. */
+@media (min-width: 769px) and (max-width: 1180px) {
+    .btn-nav-outline {
+        padding: 0.62rem 0.78rem;
+    }
+
+    .btn-nav-outline .btn-nav-outline-label {
+        display: none;
+    }
+}
+
+/* Mobile: tombol menumpuk full-width, isi tetap rata tengah. */
+@media (max-width: 768px) {
+    .btn-nav-outline {
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+
 .lang-switch {
     display: inline-flex;
     gap: 0.35rem;
